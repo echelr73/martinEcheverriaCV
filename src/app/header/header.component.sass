@@ -1,0 +1,30 @@
+// Definición de la paleta de colores
+$negro: #000000
+$blanco: #FFFFFF
+$azul-oscuro: #1E3A8A
+$gris-oscuro: #4B5563
+$azul-claro: #93C5FD
+$gris-claro: #D1D5DB
+$azul-suave: #60A5FA
+
+// Estilos del header
+.header-title
+    user-select: none
+    font-size: 24px
+    font-weight: bold
+    color: $negro // Aplicamos el color azul grisáceo claro al título
+
+.spacer
+    flex: 1 1 auto
+
+mat-toolbar
+    padding: 0 16px
+    background-color: $gris-claro // Usamos el gris suave como fondo de la barra de herramientas
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) // Sombra para dar efecto de elevación
+
+a
+    &:hover
+        color: $azul-oscuro // Color al pasar el ratón sobre los enlaces
+
+mat-icon
+    color: $negro // Color de los iconos de Material
