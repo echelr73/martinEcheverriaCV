@@ -10,14 +10,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatGridList,
+    MatGridTile
   ],
   bootstrap: [AppComponent],
   providers: [
