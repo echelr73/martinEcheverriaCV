@@ -1,6 +1,8 @@
 // Definición de la paleta de colores
 $negro: #000000
+$negro-claro: #0c1a25
 $blanco: #FFFFFF
+$blanco-gris: #fdfdfb
 $azul-oscuro: #1E3A8A
 $gris-oscuro: #4B5563
 $azul-claro: #93C5FD
@@ -12,18 +14,35 @@ $azul-suave: #60A5FA
     user-select: none
     font-size: 24px
     font-weight: bold
-    color: $negro // Aplicamos el color azul grisáceo claro al título
+    color: $blanco-gris // Aplicamos el color azul grisáceo claro al título
+    letter-spacing: 1px // Aumenta la separación entre letras
+    @media (max-width: 800px)
+        font-size: 14px // Reduce el tamaño del texto en pantallas pequeñas
 
 .spacer
     flex: 1 1 auto
 
 mat-toolbar
-    padding: 0 16px
-    background-color: $gris-claro // Usamos el gris suave como fondo de la barra de herramientas
+    padding: 0 10px
+    background-image: linear-gradient(to right, $negro-claro, $gris-oscuro) // Aplicamos un degradado de azul oscuro a azul claro
+    width: 100% // Asegúrate de que la barra ocupe el ancho total
+
+mat-toolbar a
+    color: $blanco-gris
+    &:hover
+        color: $negro-claro // Color al pasar el ratón sobre los enlaces
+        mat-icon
+            color: $negro-claro // Cambiar color del mat-icon cuando el mouse pasa sobre el enlace
 
 a
+    @media (max-width: 800px)
+        font-size: 10px // Reduce el tamaño del texto en pantallas pequeñas
     &:hover
-        color: $negro // Color al pasar el ratón sobre los enlaces
+        color: $negro-claro // Color al pasar el ratón sobre los enlaces
+        background-color: $gris-claro
 
 mat-icon
-    color: $negro // Color de los iconos de Material
+    color: $blanco-gris // Color de los iconos de Material
+    @media (max-width: 800px)
+        width: 24px // Ajusta el tamaño de los iconos en pantallas pequeñas
+        height: 24px
