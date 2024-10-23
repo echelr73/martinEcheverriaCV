@@ -1,0 +1,44 @@
+{
+    "links": {
+        "github": {
+            "text": "GitHub",
+            "url": "https://github.com/echelr73"
+        },
+        "linkedIn": {
+            "text": "LinkedIn",
+            "url": "https://www.linkedin.com/in/martin-julian-echeverria/"
+        }
+    },
+    "name": "Martín Julián Echeverría",
+    "title": "Desarrollador Frontend SSR | Técnico Superior en Computación",
+    "description": "Soy una persona que busca crecer continuamente, aprendo rápido y me adapto muy bien a los cambios. Soy comunicativo, con muy buen trato personal y trabajo en equipo.",
+    "strengths": [
+        "Learner",
+        "Responsibility",
+        "Focus",
+        "Achiever",
+        "Futuristic"
+    ],
+    "experience": [
+        {
+            "position": "Desarrollador Frontend",
+            "company": "Empresa X",
+            "period": "2020 - Presente",
+            "description": "Desarrollo de aplicaciones web utilizando Angular y otras tecnologías."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Técnico Superior en Computación",
+            "institution": "Universidad ABC",
+            "year": "2017"
+        }
+    ],
+    "skills": [
+        "Angular",
+        "TypeScript",
+        "Ionic",
+        "HTML",
+        "CSS"
+    ]
+}

@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MatGridList, MatGridTile } from '@angular/material/grid-list';
     ExperienceComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     RouterModule.forRoot(routes),
     MatButtonModule,
