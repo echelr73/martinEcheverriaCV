@@ -19,3 +19,17 @@ mat-grid-list
 mat-card
     width: 70%
     height: 70%
+    opacity: 0
+    transform: translateY(30px)
+    transition: opacity 0.5s ease, transform 0.5s ease
+
+@keyframes fadeInUp
+    from
+        opacity: 0
+        transform: translateY(30px) // Mueve la tarjeta hacia abajo
+    to
+        opacity: 1
+        transform: translateY(0)
+
+.card-visible
+    animation: fadeInUp 1s forwards

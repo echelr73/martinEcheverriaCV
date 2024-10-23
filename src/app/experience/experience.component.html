@@ -1,7 +1,7 @@
 <div id="experience">
     <mat-grid-list cols="2" rowHeight="300px" gutterSize="16px">
         <mat-grid-tile *ngFor="let card of cards">
-            <mat-card>
+            <mat-card #card>
                 <mat-card-header>
                     <mat-card-title>{{ card.title }}</mat-card-title>
                 </mat-card-header>
