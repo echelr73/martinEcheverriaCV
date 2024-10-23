@@ -3,42 +3,32 @@
         <div class="profile-header">
             <img src="assets/img/profile.jpg" class="profile-image">
             <div class="profile-text">
-                <mat-card-title class="profile-title">Martín Julián Echeverría</mat-card-title>
-                <mat-card-subtitle class="profile-role">Desarrollador Frontend SSR | Técnico Superior en Computación</mat-card-subtitle>
-                <p>
-                    Soy una persona que busca crecer continuamente, siempre en la búsqueda de nuevas oportunidades y
-                    desafíos que me permitan expandir mis habilidades y conocimientos. Aprendo rápido y me adapto muy
-                    bien a los cambios, lo que me ayuda a enfrentar situaciones inesperadas con confianza y eficacia.
-
-                    Soy comunicativo, lo que me permite establecer relaciones sólidas y efectivas con mis compañeros y
-                    clientes. Disfruto del trabajo en equipo, ya que creo que las mejores ideas surgen cuando
-                    colaboramos y compartimos nuestras perspectivas. Mi enfoque es siempre positivo, buscando fomentar
-                    un ambiente de trabajo armonioso y productivo. Me esfuerzo por escuchar a los demás y aportar mis
-                    ideas de manera constructiva, para así lograr objetivos comunes.
-                </p>
-                <mat-card-subtitle class="profile-fortalezas">
-                    Fortalezas
+                <mat-card-title class="profile-title">{{this.name}}</mat-card-title>
+                <mat-card-subtitle class="profile-role">{{this.role}}</mat-card-subtitle>
+                <p>{{this.description}}</p>
+                <mat-card-subtitle class="profile-strengths">
+                    {{this.profile_strengths.title}}
                 </mat-card-subtitle>
                 <ul>
-                    <li matTooltip="Siempre busco aprender y adquirir nuevos conocimientos." matTooltipPosition="below"
+                    <li matTooltip="{{this.profile_strengths.strengths_responsibility.tooltip}}" matTooltipPosition="below"
                         aria-label="Learner">
-                        <mat-icon>school</mat-icon>Learner
+                        <mat-icon>school</mat-icon>{{this.profile_strengths.strengths_learner.title}}
                     </li>
-                    <li matTooltip="Me tomo en serio mis responsabilidades y cumplo con mis compromisos."
+                    <li matTooltip="{{this.profile_strengths.strengths_responsibility.tooltip}}"
                         matTooltipPosition="below" aria-label="Responsibility">
-                        <mat-icon>verified_user</mat-icon>Responsibility
+                        <mat-icon>verified_user</mat-icon>{{this.profile_strengths.strengths_responsibility.title}}
                     </li>
-                    <li matTooltip="Tengo la capacidad de mantenerme enfocado en mis metas y evitar distracciones."
+                    <li matTooltip="{{this.profile_strengths.strengths_focus.tooltip}}"
                         matTooltipPosition="below" aria-label="Focus">
-                        <mat-icon>center_focus_strong</mat-icon>Focus
+                        <mat-icon>center_focus_strong</mat-icon>{{this.profile_strengths.strengths_focus.title}}
                     </li>
-                    <li matTooltip="Soy una persona motivada que busca alcanzar el éxito en todo lo que hago."
+                    <li matTooltip="{{this.profile_strengths.strengths_achiever.tooltip}}"
                         matTooltipPosition="below" aria-label="Achiever">
-                        <mat-icon>check_circle</mat-icon>Achiever
+                        <mat-icon>check_circle</mat-icon>{{this.profile_strengths.strengths_achiever.title}}
                     </li>
-                    <li matTooltip="Siempre pienso en el futuro y en cómo prepararme para lo que viene."
+                    <li matTooltip="{{this.profile_strengths.strengths_futuristic.tooltip}}"
                         matTooltipPosition="below" aria-label="Futuristic">
-                        <mat-icon>timeline</mat-icon>Futuristic
+                        <mat-icon>timeline</mat-icon>{{this.profile_strengths.strengths_futuristic.title}}
                     </li>
                 </ul>
             </div>

@@ -30,9 +30,9 @@ export class CvService {
     return this.getCvData().pipe(
       map(data => ({
         name: data.name,
-        title: data.title,
+        role: data.role,
         description: data.description,
-        strengths: data.strengths
+        profile_strengths: data.profile_strengths
       }))
     );
   }
