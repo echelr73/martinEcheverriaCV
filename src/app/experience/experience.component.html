@@ -3,10 +3,11 @@
         <mat-grid-tile *ngFor="let card of cards">
             <mat-card #card>
                 <mat-card-header>
-                    <mat-card-title>{{ card.title }}</mat-card-title>
+                    <mat-card-title>{{ card.position }}</mat-card-title>
                 </mat-card-header>
+                <mat-card-subtitle>{{card.period}} - {{ card.company }}</mat-card-subtitle>
                 <mat-card-content>
-                    <p>{{ card.content }}</p>
+                    <p>{{ card.description }}</p>
                 </mat-card-content>
             </mat-card>
         </mat-grid-tile>

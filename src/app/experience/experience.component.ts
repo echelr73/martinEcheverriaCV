@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { CvService } from '../services/cv.service';
 
 @Component({
   selector: 'app-experience',
@@ -7,26 +8,24 @@ import { AfterViewInit, Component, ElementRef, QueryList, Renderer2, ViewChildre
 })
 export class ExperienceComponent implements AfterViewInit {
 
-  cards = [
-    { title: 'Experiencia 1', content: 'Descripción de la experiencia 1' },
-    { title: 'Experiencia 2', content: 'Descripción de la experiencia 2' },
-    { title: 'Experiencia 3', content: 'Descripción de la experiencia 3' },
-    { title: 'Experiencia 4', content: 'Descripción de la experiencia 4' },
-    { title: 'Experiencia 5', content: 'Descripción de la experiencia 5' },
-    { title: 'Experiencia 6', content: 'Descripción de la experiencia 6' }
-  ];
+  public cards: any[] = [];
 
   @ViewChildren('card', { read: ElementRef }) cardsElement!: QueryList<ElementRef>;
 
-  constructor(private renderer: Renderer2) {
-
+  constructor(private renderer: Renderer2, private cvService: CvService) {
+    this.getData();
   }
 
-  ngAfterViewInit() {
-    // Configura el IntersectionObserver para observar cuando las tarjetas son visibles
+  ngAfterViewInit(): void {
+    if (this.cardsElement) {
+      this.setupObserver();
+    }
+  }
+
+  private setupObserver() {
     const options = {
       root: null, // Usa el viewport como contenedor
-      threshold: 0.1 // 10% del elemento debe estar visible para activar la animación
+      threshold: 0.5 // 10% del elemento debe estar visible para activar la animación
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -38,8 +37,22 @@ export class ExperienceComponent implements AfterViewInit {
         }
       });
     }, options);
-    // Aplica el observer a cada tarjeta mat-card
-    this.cardsElement.forEach(card => observer.observe(card.nativeElement));
 
+    // Asegúrate de que cardsElement tiene elementos antes de observar
+    this.cardsElement.forEach(card => {
+      if (card.nativeElement) {
+        observer.observe(card.nativeElement);
+      }
+    });
+  }
+
+  getData(): void {
+    this.cvService.getExperienceData().subscribe(data => {
+      this.cards = data.experience;
+
+      setTimeout(() => {
+        this.setupObserver();
+      });
+    });
   }
 }

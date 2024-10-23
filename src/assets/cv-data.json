@@ -37,10 +37,28 @@
     },
     "experience": [
         {
-            "position": "Desarrollador Frontend",
-            "company": "Empresa X",
-            "period": "2020 - Presente",
-            "description": "Desarrollo de aplicaciones web utilizando Angular y otras tecnologías."
+            "position": "Desarrollador Fullstack .NET/Angular",
+            "company": "Accenture",
+            "period": "Agosto 2022 - Presente",
+            "description": "Trabajo en un proyecto interno que se utiliza para la carga de horas trabajadas y gastos de los empleados de la empresa a nivel mundial. Resolución de bugs y desarrollo e implementación de User Story asignadas. Angular, .NET, Git, SQL Server, Azure, Scrum."
+        },
+        {
+            "position": "Desarrollador Fullstack .NET/Angular",
+            "company": "Aoniken Servicio IT",
+            "period": "Agosto 2021 - Agosto 2022",
+            "description": "Aplicacion para la administracion de aeroplantas de YPF, incluia facturacion y comunicacion con servicios del cliente. Utilizamos una arquitectura de microservicios implementado en Kubernetes. C#, SQL Server, Angular, Node.js, GIT, Azure."
+        },
+        {
+            "position": "Soporte Tecnico mesa de ayuda",
+            "company": "Aoniken Servicio IT",
+            "period": "Septiembre 2020 - Agosto 2021",
+            "description": "Soporte de aplicacion para administrat estaciones de servicio. Instalacion y configuracion de servidores y terminales de trabajo. Mantenimiento y correccion de bases de datos SQL Server."
+        },
+        {
+            "position": "Encargado de sucursal",
+            "company": "Jean Cartier Hogar",
+            "period": "Marzo 2018 - Septiembre 2020",
+            "description": "Tareas administrativas, seguimientos de pagos. Atencion y planificacion de redes sociales. Coordinacion y control de pedidos. Resolucion de problemas, manejo de caja y armado de informes a gerencia. Personal a cargo."
         }
     ],
     "education": [

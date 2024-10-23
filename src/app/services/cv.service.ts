@@ -36,4 +36,12 @@ export class CvService {
       }))
     );
   }
+
+  getExperienceData(): Observable<any> {
+    return this.getCvData().pipe(
+      map(data => ({
+        experience: data.experience
+      }))
+    );
+  }
 }
