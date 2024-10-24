@@ -8,17 +8,24 @@ $azul-claro: #93C5FD
 $gris-claro: #D1D5DB
 $azul-suave: #60A5FA
 
-mat-grid-list
+#experience
+  background-color: $negro-claro
+  padding: 2rem
+  mat-grid-list
+    width: 100%
+    margin: 0 auto
     border-top-left-radius: 0
     border-top-right-radius: 0
     border-bottom-right-radius: 10px
-    width: 100%
-    margin: 16px 0
-    background-color: $negro-claro
+
+mat-grid-tile
+    mat-card
+        background-color: $blanco
+        border-radius: 8px
+        padding: 1rem
 
 mat-card
-    width: 70%
-    height: 70%
+    height: 80%
     opacity: 0
     transform: translateY(30px)
     transition: opacity 0.5s ease, transform 0.5s ease
@@ -31,5 +38,34 @@ mat-card
         opacity: 1
         transform: translateY(0)
 
+mat-card-title
+    font-size: 1.5rem
+    color: $azul-oscuro
+    font-weight: bold
+
+mat-card-subtitle
+    font-size: 1rem
+    color: $gris-oscuro
+    padding: 5px 16px 0
+
+mat-card-content p
+    font-size: 1rem
+    color: $negro
+    line-height: 1.5
+    margin-bottom: 1rem
+
 .card-visible
     animation: fadeInUp 1s forwards
+
+.tech-icons
+    display: flex
+    justify-content: start
+    gap: 1rem
+    padding: 16px 16px 0
+    justify-content: center
+    img
+        width: 32px
+        height: 32px
+        transition: transform 0.2s ease-in-out
+        &:hover
+            transform: scale(1.2)

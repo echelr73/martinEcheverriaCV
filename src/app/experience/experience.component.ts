@@ -12,6 +12,24 @@ export class ExperienceComponent implements AfterViewInit {
 
   @ViewChildren('card', { read: ElementRef }) cardsElement!: QueryList<ElementRef>;
 
+  // Mapa de tecnologías a URLs de íconos
+  techIcons: { [key: string]: string } = {
+    Angular: "https://img.icons8.com/color/48/angularjs.png",
+    ".NET": "https://img.icons8.com/color/48/net-framework.png",
+    Git: "https://img.icons8.com/color/48/git.png",
+    "SQL Server": "https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-sql-server-big-data-wanicon-lineal-color-wanicon.png",
+    Azure: "https://img.icons8.com/fluency/48/azure-1.png",
+    Postman: "https://img.icons8.com/dusk/50/postman-api.png",
+    Node: "https://img.icons8.com/fluency/48/node-js.png",
+    Windows: "https://img.icons8.com/color/48/windows-10.png",
+    Office: "https://img.icons8.com/office/40/microsoft-365.png"
+  };
+
+  // Función para obtener el ícono por tecnología
+  getIcon(tech: string): string {
+    return this.techIcons[tech] || ''; // Devuelve el URL o cadena vacía si no encuentra
+  }
+
   constructor(private renderer: Renderer2, private cvService: CvService) {
     this.getData();
   }

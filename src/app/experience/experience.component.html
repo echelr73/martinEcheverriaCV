@@ -5,10 +5,13 @@
                 <mat-card-header>
                     <mat-card-title>{{ card.position }}</mat-card-title>
                 </mat-card-header>
-                <mat-card-subtitle>{{card.period}} - {{ card.company }}</mat-card-subtitle>
+                <mat-card-subtitle>{{card.period}} | {{ card.company }}</mat-card-subtitle>
                 <mat-card-content>
                     <p>{{ card.description }}</p>
                 </mat-card-content>
+                <div class="tech-icons">
+                    <img *ngFor="let tech of card.tecnology" [src]="getIcon(tech)" [alt]="tech" [title]="tech" width="48" height="48" matTooltip="{{tech}}" matTooltipPosition="above">
+                  </div>
             </mat-card>
         </mat-grid-tile>
     </mat-grid-list>
