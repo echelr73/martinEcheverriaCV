@@ -1,0 +1,21 @@
+<div id="studies">
+    <mat-grid-list cols="1" rowHeight="200px" gutterSize="16px">
+        <mat-grid-tile *ngFor="let study of studies" class="study-tile">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ study.degree }}</mat-card-title>
+                    <mat-card-subtitle>{{ study.period }} - {{ study.institution }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{ study.description }}</p>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <!-- Agregar animación de Lottie -->
+    <div class="lottie-container">
+        <dotlottie-player src="https://lottie.host/4a0ec478-02d0-4800-964b-8a612005036c/OVlQTEyxSd.json"
+            background="transparent" speed="1" loop autoplay>
+        </dotlottie-player>
+    </div>
+</div>

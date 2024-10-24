@@ -10,8 +10,8 @@
                     {{this.profile_strengths?.title}}
                 </mat-card-subtitle>
                 <ul>
-                    <li id="strengths1" matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}" matTooltipPosition="below"
-                        aria-label="Learner">
+                    <li id="strengths1" matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}"
+                        matTooltipPosition="below" aria-label="Learner">
                         <mat-icon>school</mat-icon>{{this.profile_strengths?.strengths_learner.title}}
                     </li>
                     <li id="strengths2" matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}"
@@ -36,10 +36,15 @@
         </div>
     </mat-card-header>
     <mat-card-actions>
-        <button class="flip-horizontal-fwd" mat-button color="primary" (click)="scrollToExperience()">Experiencia</button>
-        <button class="flip-horizontal-fwd" mat-button color="primary">Estudios</button>
+        <button class="flip-horizontal-fwd" mat-button color="primary"
+            (click)="scrollToExperience()">Experiencia</button>
+        <button class="flip-horizontal-fwd" mat-button color="primary" (click)="scrollToStudies()">Estudios</button>
         <button class="flip-horizontal-fwd" mat-button color="primary">Cursos</button>
         <button class="flip-horizontal-fwd" mat-button color="primary">Referencias</button>
         <button class="flip-horizontal-fwd" mat-button color="primary">Contacto</button>
     </mat-card-actions>
+
 </mat-card>
+<section class="container">
+    <div class="wave"></div>
+</section>

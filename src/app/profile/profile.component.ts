@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
 
   // Aquí seleccionamos el componente 'experience' por su id
   @ViewChild('experience', { static: false }) experienceSection!: ElementRef;
+  @ViewChild('studies', { static: false }) studiesSection!: ElementRef;
 
   constructor(private cvService: CvService) { }
 
@@ -28,6 +29,13 @@ export class ProfileComponent implements OnInit {
 
   scrollToExperience() {
     const element = document.getElementById('experience');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  scrollToStudies() {
+    const element = document.getElementById('studies');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

@@ -1,5 +1,6 @@
 // Definición de la paleta de colores
 $negro: #000000
+$negro-claro: #0c1a25
 $blanco: #FFFFFF
 $azul-oscuro: #1E3A8A
 $gris-oscuro: #4B5563
@@ -20,8 +21,10 @@ mat-card
   background-size: cover // Ajusta la imagen al tamaño del contenedor
   background-position: right // Centra la imagen
   background-repeat: no-repeat // Evita que la imagen se repita
-  background-size: 50% // Ajusta el tamaño de la imagen de fondo
-  
+  background-size: 40% // Ajusta el tamaño de la imagen de fondo
+  background-position-y: -35px
+  box-shadow: none
+
 .profile-header
   user-select: none
   display: flex
@@ -37,7 +40,7 @@ mat-card
   border-radius: 50% // Hace la imagen circular
   object-fit: cover // Para que la imagen mantenga su proporción dentro del círculo
   margin-right: 16px // Separar la imagen del texto
-  margin-top: -50px // Ajustar la posición de la imagen 
+  margin-top: -50px // Ajustar la posición de la imagen
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
   @media (max-width: 800px)
     width: 300px
@@ -101,16 +104,15 @@ li
   -webkit-animation: roll-in-left 0.6s ease-out 4s both
   animation: roll-in-left 0.6s ease-out 4s both
 
-
 @-webkit-keyframes roll-in-left
   0%
-    -webkit-transform: translateX(500px) rotate(540deg)
-    transform: translateX(500px) rotate(540deg)
-    opacity: 0
+  -webkit-transform: translateX(500px) rotate(540deg)
+  transform: translateX(500px) rotate(540deg)
+  opacity: 0
   100%
-    -webkit-transform: translateX(0) rotate(0deg)
-    transform: translateX(0) rotate(0deg)
-    opacity: 1
+  -webkit-transform: translateX(0) rotate(0deg)
+  transform: translateX(0) rotate(0deg)
+  opacity: 1
 
 @keyframes roll-in-left
   0%
@@ -121,7 +123,6 @@ li
     -webkit-transform: translateX(0) rotate(0deg)
     transform: translateX(0) rotate(0deg)
     opacity: 1
-
 
 .profile-title
   font-size: 26px
@@ -145,6 +146,7 @@ mat-card-actions
   justify-content: center // Centra los botones horizontalmente
   gap: 16px // Añade espacio entre los botones (ajústalo según prefieras)
   margin-top: 30px // Añade margen superior a los botones
+  z-index: 1000
   button
     background-color: $azul-oscuro
     color: $blanco
@@ -165,13 +167,13 @@ mat-card-actions
 
 @-webkit-keyframes flip-horizontal-fwd
   0%
-    opacity: 0
-    -webkit-transform: translateZ(160px) rotateX(-180deg)
-    transform: translateZ(160px) rotateX(-180deg)
+  opacity: 0
+  -webkit-transform: translateZ(160px) rotateX(-180deg)
+  transform: translateZ(160px) rotateX(-180deg)
   100%
-    opacity: 1
-    -webkit-transform: translateZ(0) rotateX(0)
-    transform: translateZ(0) rotateX(0)
+  opacity: 1
+  -webkit-transform: translateZ(0) rotateX(0)
+  transform: translateZ(0) rotateX(0)
 
 @keyframes flip-horizontal-fwd
   0%
@@ -181,5 +183,36 @@ mat-card-actions
   100%
     opacity: 1
     -webkit-transform: translateZ(0) rotateX(0)
-    transform: translateZ(0) rotateX(0) 
-  
+    transform: translateZ(0) rotateX(0)
+
+.container
+  position: relative
+  background: $blanco
+
+.wave
+  position: absolute
+  height: 147px
+  width: 100%
+  background: $blanco
+  bottom: 0
+
+.wave::before, .wave::after
+  content: ""
+  display: block
+  position: absolute
+  border-radius: 50% 100%
+  width: 100%
+
+.wave::before
+  width: 55%
+  height: 100%
+  background-color: $blanco
+  right: 0%
+  top: 33%
+
+.wave::after
+  width: 55%
+  height: 109%
+  background-color: $negro-claro
+  left: -1.5%
+  top: 58%
