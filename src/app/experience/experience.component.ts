@@ -47,11 +47,19 @@ export class ExperienceComponent implements AfterViewInit {
     };
 
     const observer = new IntersectionObserver((entries) => {
+      let counter = 0;
       entries.forEach(entry => {
+        
         if (entry.isIntersecting) {
-          this.renderer.addClass(entry.target, 'card-visible');
+          if (counter % 2 === 0){
+            this.renderer.addClass(entry.target, 'card-visible-right');
+          }else {
+            this.renderer.addClass(entry.target, 'card-visible-left');;
+          }
+          counter++;
         } else {
-          this.renderer.removeClass(entry.target, 'card-visible');
+          this.renderer.removeClass(entry.target, 'card-visible-left');
+          this.renderer.removeClass(entry.target, 'card-visible-right');
         }
       });
     }, options);

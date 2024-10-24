@@ -13,30 +13,32 @@ $azul-suave: #60A5FA
   padding: 2rem
   mat-grid-list
     width: 100%
-    margin: 0 auto
-    border-top-left-radius: 0
-    border-top-right-radius: 0
-    border-bottom-right-radius: 10px
-
-mat-grid-tile
-    mat-card
-        background-color: $blanco
-        border-radius: 8px
-        padding: 1rem
+    margin: 0 auto   
 
 mat-card
     height: 80%
+    background-color: $blanco
+    border-radius: 8px
+    padding: 1rem
     opacity: 0
     transform: translateY(30px)
     transition: opacity 0.5s ease, transform 0.5s ease
 
-@keyframes fadeInUp
+@keyframes fadeInLeft
     from
         opacity: 0
-        transform: translateY(30px) // Mueve la tarjeta hacia abajo
+        transform: translateX(100px)
     to
         opacity: 1
-        transform: translateY(0)
+        transform: translateX(0)
+
+@keyframes fadeInRight
+    from
+        opacity: 0
+        transform: translateX(-100px)
+    to
+        opacity: 1
+        transform: translateX(0)
 
 mat-card-title
     font-size: 1.5rem
@@ -54,8 +56,11 @@ mat-card-content p
     line-height: 1.5
     margin-bottom: 1rem
 
-.card-visible
-    animation: fadeInUp 1s forwards
+.card-visible-left
+    animation: fadeInLeft 1s forwards
+
+.card-visible-right
+    animation: fadeInRight 1s forwards
 
 .tech-icons
     display: flex
