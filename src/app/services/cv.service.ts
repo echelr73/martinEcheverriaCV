@@ -44,4 +44,12 @@ export class CvService {
       }))
     );
   }
+
+  getEducationData(): Observable<any> {
+    return this.getCvData().pipe(
+      map(data => ({
+        education: data.education
+      }))
+    );
+  }
 }

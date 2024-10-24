@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -14,6 +14,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { StudiesComponent } from './studies/studies.component';
+import { MatDivider } from '@angular/material/divider';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     ProfileComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    StudiesComponent
   ],
   imports: [
     HttpClientModule,
@@ -33,11 +36,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatTooltipModule,
     MatGridList,
-    MatGridTile
+    MatGridTile,
+    MatDivider
   ],
   bootstrap: [AppComponent],
   providers: [
     provideAnimationsAsync()
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
