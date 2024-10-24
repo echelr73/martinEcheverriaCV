@@ -10,23 +10,23 @@
                     {{this.profile_strengths?.title}}
                 </mat-card-subtitle>
                 <ul>
-                    <li matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}" matTooltipPosition="below"
+                    <li id="strengths1" matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}" matTooltipPosition="below"
                         aria-label="Learner">
                         <mat-icon>school</mat-icon>{{this.profile_strengths?.strengths_learner.title}}
                     </li>
-                    <li matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}"
+                    <li id="strengths2" matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}"
                         matTooltipPosition="below" aria-label="Responsibility">
                         <mat-icon>verified_user</mat-icon>{{this.profile_strengths?.strengths_responsibility.title}}
                     </li>
-                    <li matTooltip="{{this.profile_strengths?.strengths_focus.tooltip}}"
+                    <li id="strengths3" matTooltip="{{this.profile_strengths?.strengths_focus.tooltip}}"
                         matTooltipPosition="below" aria-label="Focus">
                         <mat-icon>center_focus_strong</mat-icon>{{this.profile_strengths?.strengths_focus.title}}
                     </li>
-                    <li matTooltip="{{this.profile_strengths?.strengths_achiever.tooltip}}"
+                    <li id="strengths4" matTooltip="{{this.profile_strengths?.strengths_achiever.tooltip}}"
                         matTooltipPosition="below" aria-label="Achiever">
                         <mat-icon>check_circle</mat-icon>{{this.profile_strengths?.strengths_achiever.title}}
                     </li>
-                    <li matTooltip="{{this.profile_strengths?.strengths_futuristic.tooltip}}"
+                    <li id="strengths5" matTooltip="{{this.profile_strengths?.strengths_futuristic.tooltip}}"
                         matTooltipPosition="below" aria-label="Futuristic">
                         <mat-icon>timeline</mat-icon>{{this.profile_strengths?.strengths_futuristic.title}}
                     </li>
@@ -36,10 +36,10 @@
         </div>
     </mat-card-header>
     <mat-card-actions>
-        <button mat-button color="primary" (click)="scrollToExperience()">Experiencia</button>
-        <button mat-button color="primary">Estudios</button>
-        <button mat-button color="primary">Cursos</button>
-        <button mat-button color="primary">Referencias</button>
-        <button mat-button color="primary">Contacto</button>
+        <button class="flip-horizontal-fwd" mat-button color="primary" (click)="scrollToExperience()">Experiencia</button>
+        <button class="flip-horizontal-fwd" mat-button color="primary">Estudios</button>
+        <button class="flip-horizontal-fwd" mat-button color="primary">Cursos</button>
+        <button class="flip-horizontal-fwd" mat-button color="primary">Referencias</button>
+        <button class="flip-horizontal-fwd" mat-button color="primary">Contacto</button>
     </mat-card-actions>
 </mat-card>

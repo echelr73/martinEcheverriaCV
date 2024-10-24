@@ -9,10 +9,11 @@ $gris-super-claro: #F3F4F6
 $azul-suave: #60A5FA
 
 mat-card
-  border-top-left-radius: 0
-  border-top-right-radius: 0
+  border-bottom-left-radius: 0 // Elimina la esquina inferior izquierda
+  border-bottom-right-radius: 0
   background-color: $blanco
   width: 100% // Evita que el contenido se desborde
+  height: 100vh
   box-sizing: border-box // Asegura que no se corte
   padding: 32px // Espaciado interno
   background-image: url('/assets/img/background.png') // Agrega una imagen de fondo
@@ -75,9 +76,52 @@ li
   padding: 16px // Espaciado interno para dar un efecto de botón
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(255, 255, 255, 0.4) // Sombra interna para el efecto de relieve
   transition: box-shadow 0.3s ease // Transición suave para la sombra
+  opacity: 0
   &:hover
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 2px 5px rgba(255, 255, 255, 0.2) // Sombra interna más sutil al pasar el mouse
     background-color: darken($azul-claro, 5%) // Oscurece el color de fondo al pasar el mouse
+
+#strengths1
+  -webkit-animation: roll-in-left 0.6s ease-out both
+  animation: roll-in-left 0.6s ease-out both
+
+#strengths2
+  -webkit-animation: roll-in-left 0.6s ease-out 1s both
+  animation: roll-in-left 0.6s ease-out 1s both
+
+#strengths3
+  -webkit-animation: roll-in-left 0.6s ease-out 2s both
+  animation: roll-in-left 0.6s ease-out 2s both
+
+#strengths4
+  -webkit-animation: roll-in-left 0.6s ease-out 3s both
+  animation: roll-in-left 0.6s ease-out 3s both
+
+#strengths5
+  -webkit-animation: roll-in-left 0.6s ease-out 4s both
+  animation: roll-in-left 0.6s ease-out 4s both
+
+
+@-webkit-keyframes roll-in-left
+  0%
+    -webkit-transform: translateX(500px) rotate(540deg)
+    transform: translateX(500px) rotate(540deg)
+    opacity: 0
+  100%
+    -webkit-transform: translateX(0) rotate(0deg)
+    transform: translateX(0) rotate(0deg)
+    opacity: 1
+
+@keyframes roll-in-left
+  0%
+    -webkit-transform: translateX(500px) rotate(540deg)
+    transform: translateX(500px) rotate(540deg)
+    opacity: 0
+  100%
+    -webkit-transform: translateX(0) rotate(0deg)
+    transform: translateX(0) rotate(0deg)
+    opacity: 1
+
 
 .profile-title
   font-size: 26px
@@ -109,5 +153,33 @@ mat-card-actions
     border-radius: 4px
     cursor: pointer
     transition: background-color 0.3s ease // Transición suave para el color de fondo
+    opacity: 1
     &:hover
       background-color: darken($azul-claro, 10%) // Oscurece el color de fondo al pasar el mouse
+
+.flip-horizontal-fwd
+  -webkit-animation: flip-horizontal-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 5s backwards
+  animation: flip-horizontal-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 5s backwards
+  animation-iteration-count: 1
+  -webkit-animation-iteration-count: 1
+
+@-webkit-keyframes flip-horizontal-fwd
+  0%
+    opacity: 0
+    -webkit-transform: translateZ(160px) rotateX(-180deg)
+    transform: translateZ(160px) rotateX(-180deg)
+  100%
+    opacity: 1
+    -webkit-transform: translateZ(0) rotateX(0)
+    transform: translateZ(0) rotateX(0)
+
+@keyframes flip-horizontal-fwd
+  0%
+    opacity: 0
+    -webkit-transform: translateZ(160px) rotateX(-180deg)
+    transform: translateZ(160px) rotateX(-180deg)
+  100%
+    opacity: 1
+    -webkit-transform: translateZ(0) rotateX(0)
+    transform: translateZ(0) rotateX(0) 
+  
