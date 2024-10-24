@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CvService } from '../services/cv.service';
 
 @Component({
   selector: 'app-studies',
@@ -7,19 +8,16 @@ import { Component } from '@angular/core';
 })
 export class StudiesComponent {
 
-  public studies = [
-      {
-        "degree": "Ingeniería en Sistemas de Información",
-        "institution": "Universidad Tecnológica Nacional",
-        "period": "2015 - 2021",
-        "description": "Estudios enfocados en desarrollo de software, bases de datos, redes y administración de proyectos."
-      },
-      {
-        "degree": "Curso de Fullstack Developer",
-        "institution": "Udemy",
-        "period": "2021",
-        "description": "Curso online de desarrollo web completo utilizando tecnologías modernas como Angular, Node.js y MongoDB."
-      }
-    ]
+  public studies: any[] = [];
 
+  constructor(private cvService: CvService) {
+    this.getData();
+  }
+
+  getData(): void {
+    this.cvService.getEducationData().subscribe(data => {
+      this.studies = data.education;
+      console.log(this.studies);
+    });
+  }
 }
