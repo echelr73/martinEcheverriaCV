@@ -34,24 +34,8 @@ mat-card
     text-align: center
     flex-wrap: wrap // Permitir que el contenido se acomode en varias líneas
 
-/* .profile-image
-  width: 400px
-  height: 400px
-  border-radius: 50% // Hace la imagen circular
-  object-fit: cover // Para que la imagen mantenga su proporción dentro del círculo
-  margin-right: 16px // Separar la imagen del texto
-  margin-top: -50px // Ajustar la posición de la imagen
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
-  @media (max-width: 800px)
-    width: 300px
-    height: 300px
-    margin-right: 0 // Eliminar el margen derecho en pantallas pequeñas
-    margin-top: 0 // Eliminar el margen superior en pantallas pequeñas
-    margin-bottom: 16px // Añadir margen inferior en pantallas pequeñas */
-
 .profile-image
   width: 400px
-  //box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
   margin-right: 1% // Separar la imagen del texto
   margin-top: -6% // Ajustar la posición de la imagen
 
@@ -112,8 +96,8 @@ li
 
 @-webkit-keyframes roll-in-left
   0%
-  -webkit-transform: translateX(500px) rotate(540deg)
-  transform: translateX(500px) rotate(540deg)
+  -webkit-transform: translateX(400px) rotate(540deg)
+  transform: translateX(400px) rotate(540deg)
   opacity: 0
   100%
   -webkit-transform: translateX(0) rotate(0deg)
@@ -122,8 +106,8 @@ li
 
 @keyframes roll-in-left
   0%
-    -webkit-transform: translateX(500px) rotate(540deg)
-    transform: translateX(500px) rotate(540deg)
+    -webkit-transform: translateX(400px) rotate(540deg)
+    transform: translateX(400px) rotate(540deg)
     opacity: 0
   100%
     -webkit-transform: translateX(0) rotate(0deg)
@@ -142,54 +126,11 @@ li
 .profile-strengths
   font-size: 18px
   color: $negro
+  margin-top: 16px
 
 p
   font-size: 18px
   color: $azul-oscuro
-
-mat-card-actions
-  display: flex
-  justify-content: center // Centra los botones horizontalmente
-  gap: 16px // Añade espacio entre los botones (ajústalo según prefieras)
-  margin-top: 30px // Añade margen superior a los botones
-  z-index: 1000
-  button
-    background-color: $azul-oscuro
-    color: $blanco
-    border: none
-    padding: 8px 16px
-    border-radius: 4px
-    cursor: pointer
-    transition: background-color 0.3s ease // Transición suave para el color de fondo
-    opacity: 1
-    &:hover
-      background-color: darken($azul-claro, 10%) // Oscurece el color de fondo al pasar el mouse
-
-.flip-horizontal-fwd
-  -webkit-animation: flip-horizontal-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 5s backwards
-  animation: flip-horizontal-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 5s backwards
-  animation-iteration-count: 1
-  -webkit-animation-iteration-count: 1
-
-@-webkit-keyframes flip-horizontal-fwd
-  0%
-  opacity: 0
-  -webkit-transform: translateZ(160px) rotateX(-180deg)
-  transform: translateZ(160px) rotateX(-180deg)
-  100%
-  opacity: 1
-  -webkit-transform: translateZ(0) rotateX(0)
-  transform: translateZ(0) rotateX(0)
-
-@keyframes flip-horizontal-fwd
-  0%
-    opacity: 0
-    -webkit-transform: translateZ(160px) rotateX(-180deg)
-    transform: translateZ(160px) rotateX(-180deg)
-  100%
-    opacity: 1
-    -webkit-transform: translateZ(0) rotateX(0)
-    transform: translateZ(0) rotateX(0)
 
 .container
   position: relative
