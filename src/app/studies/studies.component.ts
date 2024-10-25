@@ -8,7 +8,7 @@ import { CvService } from '../services/cv.service';
 })
 export class StudiesComponent {
 
-  public studies: any[] = [];
+  public study: any;
 
   constructor(private cvService: CvService) {
     this.getData();
@@ -16,8 +16,8 @@ export class StudiesComponent {
 
   getData(): void {
     this.cvService.getEducationData().subscribe(data => {
-      this.studies = data.education;
-      console.log(this.studies);
+      this.study = data.education;
+      console.log(this.study);
     });
   }
 }

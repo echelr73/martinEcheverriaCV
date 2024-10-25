@@ -12,13 +12,15 @@ $azul-suave: #60A5FA
     position: fixed
     bottom: 20px
     right: 20px
-    background-color: rgba(255, 255, 255, 0)
+    background-color: transparent
     border-radius: 50%
+    border: 2px solid $blanco
     transition: background-color 0.3s
     padding: 10px
     z-index: 1000
     cursor: pointer
-    color: $gris-oscuro
+    color: $blanco
     &:hover
-        background-color: #848484
+        box-shadow: 0 0 5px 0 $blanco
+        background-color: $blanco
         color: $negro
