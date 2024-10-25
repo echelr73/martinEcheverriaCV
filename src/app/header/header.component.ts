@@ -17,5 +17,19 @@ export class HeaderComponent implements OnInit {
       this.links = data.links;
     });
   }
+
+  scrollToExperience() {
+    const element = document.getElementById('experience');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  scrollToStudies() {
+    const element = document.getElementById('education');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
     
 }

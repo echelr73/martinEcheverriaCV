@@ -12,10 +12,6 @@ export class ProfileComponent implements OnInit {
   description: any;
   profile_strengths: any;
 
-  // Aquí seleccionamos el componente 'experience' por su id
-  @ViewChild('experience', { static: false }) experienceSection!: ElementRef;
-  @ViewChild('studies', { static: false }) studiesSection!: ElementRef;
-
   constructor(private cvService: CvService) { }
 
   ngOnInit(): void {
@@ -25,19 +21,5 @@ export class ProfileComponent implements OnInit {
       this.description = data.description;
       this.profile_strengths = data.profile_strengths;
     });
-  }
-
-  scrollToExperience() {
-    const element = document.getElementById('experience');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-
-  scrollToStudies() {
-    const element = document.getElementById('studies');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
   }
 }

@@ -17,7 +17,6 @@ export class StudiesComponent {
   getData(): void {
     this.cvService.getEducationData().subscribe(data => {
       this.study = data.education;
-      console.log(this.study);
     });
   }
 }
