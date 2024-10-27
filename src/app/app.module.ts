@@ -16,6 +16,7 @@ import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { StudiesComponent } from './studies/studies.component';
 import { MatDivider } from '@angular/material/divider';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MatDivider } from '@angular/material/divider';
     HeaderComponent,
     ProfileComponent,
     ExperienceComponent,
-    StudiesComponent
+    StudiesComponent,
+    CertificationsComponent
   ],
   imports: [
     HttpClientModule,

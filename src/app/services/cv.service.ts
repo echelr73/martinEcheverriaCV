@@ -52,4 +52,12 @@ export class CvService {
       }))
     );
   }
+
+  getCertificationsData(): Observable<any> {
+    return this.getCvData().pipe(
+      map(data => ({
+        certifications: data.certifications
+      }))
+    );
+  }
 }

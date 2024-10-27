@@ -1,0 +1,20 @@
+<div id="certifications">
+    <h2>Certificaciones y cursos</h2>
+    <mat-grid-list cols="2" rowHeight="300px" gutterSize="30px" class="certification-grid">
+        <mat-grid-tile class="certification-item" *ngFor="let certification of certifications">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title class="icon-container">
+                        <img [src]="getIcon(certification.logo)" [alt]="certification.logo" [title]="certification.logo"
+                        width="56" height="56" matTooltip="{{certification.logo}}" matTooltipPosition="above">
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-subtitle>{{ certification.title }}</mat-card-subtitle>
+                <mat-card-content class="text-content">
+                    <p>{{ certification.description }}</p>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+

@@ -31,5 +31,12 @@ export class HeaderComponent implements OnInit {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+
+  scrollToCertifications() {
+    const element = document.getElementById('certifications');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
     
 }

@@ -10,8 +10,9 @@
                     <p>{{ card.description }}</p>
                 </mat-card-content>
                 <div class="tech-icons">
-                    <img *ngFor="let tech of card.tecnology" [src]="getIcon(tech)" [alt]="tech" [title]="tech" width="48" height="48" matTooltip="{{tech}}" matTooltipPosition="above">
-                  </div>
+                    <img *ngFor="let tech of card.tecnology" [src]="getIcon(tech)" [alt]="tech" [title]="tech"
+                        width="48" height="48" matTooltip="{{tech}}" matTooltipPosition="above">
+                </div>
             </mat-card>
         </mat-grid-tile>
     </mat-grid-list>

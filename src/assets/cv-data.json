@@ -92,6 +92,28 @@
         "period": "2010 - 2013 y 2020",
         "description": "Curse durante 3, pero cuadno solo me faltaban 2 materias tuve que abandonar porque el horario laboral se superponia con el horario de cursada, pero en 2020, con mas tiempo, decidi retomar la carrera y finalizarla. Estudios enfocados en desarrollo de software, bases de datos, redes y administración de proyectos. A lo largo de esta carrera, adquirí competencias en el diseño y la implementación de aplicaciones informáticas, así como en la gestión eficiente de bases de datos. También profundicé en el funcionamiento de redes informáticas y en la planificación y ejecución de proyectos de TI, lo que me permitió desarrollar una visión integral sobre la tecnología y su aplicación en el mundo real."
     },
+    "certifications": [
+        {
+            "logo": "Azure",
+            "title": "AZ-204: Certified: Azure Developer Associate",
+            "description": "Certificación de Microsoft que avala mis habilidades en desarrollo de aplicaciones y soluciones en la nube de Azure. Aprendí a diseñar, probar e implementar servicios en Azure, usando tecnologías como Azure Functions, Storage, Cosmos DB, Service Bus y App Service, además de integrar soluciones en la nube con servicios locales."
+        },
+        {
+            "logo": "Javascript",
+            "title": "Master en: Angular, Typescript, NodeJS, MongoDB",
+            "description": "Curso de Udemy en el que profundicé mis conocimientos en JavaScript, jQuery, Angular y NodeJS. Aprendí a desarrollar aplicaciones web interactivas, crear servidores y servicios web, y construir aplicaciones frontend robustas y escalables en Angular, mejorando mi perfil como desarrollador."
+        },
+        {
+            "logo": "Photoshop",
+            "title": "Adobe Photoshop CC 2020",
+            "description": "Curso de Crehana sobre Adobe Photoshop CC 2020, en el que aprendí herramientas básicas, edición y retoque de imágenes, y creación de composiciones gráficas para aplicaciones web y redes sociales, ampliando mis habilidades en diseño gráfico y comunicación visual."
+        },
+        {
+            "logo": "DesignUX",
+            "title": "Fundamentos UX/UI",
+            "description": "Curso de Crehana sobre diseño UX/UI, donde aprendí metodologías de diseño centrado en el usuario, investigación de usuarios, prototipado, pruebas de usabilidad, y creación de wireframes y mockups, mejorando mi perfil como diseñador UX/UI."
+        }
+    ],
     "skills": [
         "Angular",
         "TypeScript",
