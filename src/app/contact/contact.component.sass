@@ -1,0 +1,59 @@
+$negro: #000000
+$negro-claro: #0c1a25
+$blanco: #FFFFFF
+$blanco-gris: #fdfdfb
+$azul-oscuro: #1E3A8A
+$gris-oscuro: #4B5563
+$azul-claro: #93C5FD
+$gris-claro: #D1D5DB
+$azul-suave: #60A5FA
+
+.profile-container
+    display: flex
+    align-items: flex-start
+    background-color: $blanco
+
+    h2
+        color: $azul-oscuro
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) // Sombra suave
+        text-transform: uppercase
+        font-weight: bold
+
+    .profile-image
+        width: 600px
+        margin: 0px
+        img
+            width: 100%
+            height: auto
+
+    .profile-content
+        margin: 80px 250px
+        width: 70%
+        .profile-description
+            font-size: 20px
+            margin-bottom: 15px
+            text-align: justify
+            line-height: 1.5
+            font-family: 'Open Sans Condensed', sans-serif
+
+        h3
+            font-size: 18px
+            color: $azul-suave
+            margin-bottom: 10px
+            text-decoration-line: underline
+            text-transform: uppercase
+
+        .social-icons
+            display: contents
+
+            a
+                img
+                    width: 56px
+                    height: 56px
+                    padding: 0px 10px
+                    transition: transform 0.3s ease
+
+                &:hover    
+                    img
+                        transform: scale(1.2)
+                        transition: transform 0.3s ease

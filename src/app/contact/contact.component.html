@@ -1,0 +1,22 @@
+<div id="contact">
+    <div class="profile-container">
+        <div class="profile-image">
+            <img src="assets/img/profileHalf2.png" alt="Perfil" />
+        </div>
+        <div class="profile-content">
+            <h2>Contacto</h2>
+            <p class="profile-description">
+                {{contact?.description}}
+            </p>
+            <h3>Redes Sociales</h3>
+            <div class="social-icons" *ngFor="let link of contact.links">
+                <a href="{{link.url}}" target="_blank" aria-label="link.text">
+                    <img [src]="getIcon(link.text)" [alt]="link.text" [title]="link.text" matTooltip="{{link.text}}"
+                        matTooltipPosition="above">
+                </a>
+                <!-- Agrega más redes sociales según necesites -->
+            </div>
+        </div>
+    </div>
+
+</div>

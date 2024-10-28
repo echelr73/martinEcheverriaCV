@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudiesComponent } from './studies/studies.component';
 import { MatDivider } from '@angular/material/divider';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CertificationsComponent } from './certifications/certifications.compone
     ProfileComponent,
     ExperienceComponent,
     StudiesComponent,
-    CertificationsComponent
+    CertificationsComponent,
+    ContactComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,17 +1,7 @@
 {
-    "links": {
-        "github": {
-            "text": "GitHub",
-            "url": "https://github.com/echelr73"
-        },
-        "linkedIn": {
-            "text": "LinkedIn",
-            "url": "https://www.linkedin.com/in/martin-julian-echeverria/"
-        }
-    },
     "name": "Martín Julián Echeverría",
     "role": "Desarrollador Frontend SSR | Técnico Superior en Computación",
-    "description": "Soy una persona que busca crecer continuamente, siempre en la búsqueda de nuevas oportunidades y desafíos que me permitan expandir mis habilidades y conocimientos. Aprendo rápido y me adapto muy bien a los cambios, lo que me ayuda a enfrentar situaciones inesperadas con confianza y eficacia.\\n\\nSoy comunicativo, lo que me permite establecer relaciones sólidas y efectivas con mis compañeros y clientes. Disfruto del trabajo en equipo, ya que creo que las mejores ideas surgen cuando colaboramos y compartimos nuestras perspectivas. Mi enfoque es siempre positivo, buscando fomentar un ambiente de trabajo armonioso y productivo. Me esfuerzo por escuchar a los demás y aportar mis ideas de manera constructiva, para así lograr objetivos comunes.",
+    "description": "Soy una persona que busca crecer continuamente, siempre en la búsqueda de nuevas oportunidades y desafíos que me permitan expandir mis habilidades y conocimientos. Aprendo rápido y me adapto muy bien a los cambios, lo que me ayuda a enfrentar situaciones inesperadas con confianza y eficacia. Soy comunicativo, lo que me permite establecer relaciones sólidas y efectivas con mis compañeros y clientes. Disfruto del trabajo en equipo, ya que creo que las mejores ideas surgen cuando colaboramos y compartimos nuestras perspectivas. Mi enfoque es siempre positivo, buscando fomentar un ambiente de trabajo armonioso y productivo. Me esfuerzo por escuchar a los demás y aportar mis ideas de manera constructiva, para así lograr objetivos comunes.",
     "profile_strengths": {
         "title": "Fortalezas",
         "strengths_learner": {
@@ -114,6 +104,27 @@
             "description": "Curso de Crehana sobre diseño UX/UI, donde aprendí metodologías de diseño centrado en el usuario, investigación de usuarios, prototipado, pruebas de usabilidad, y creación de wireframes y mockups, mejorando mi perfil como diseñador UX/UI."
         }
     ],
+    "contact": {
+        "description": "Soy una persona que busca crecer continuamente, siempre en la búsqueda de nuevas oportunidades y desafíos que me permitan expandir mis habilidades y conocimientos. Aprendo rápido y me adapto muy bien a los cambios, lo que me ayuda a enfrentar situaciones inesperadas con confianza y eficacia. Soy comunicativo, lo que me permite establecer relaciones sólidas y efectivas con mis compañeros y clientes. Disfruto del trabajo en equipo, ya que creo que las mejores ideas surgen cuando colaboramos y compartimos nuestras perspectivas. Mi enfoque es siempre positivo, buscando fomentar un ambiente de trabajo armonioso y productivo. Me esfuerzo por escuchar a los demás y aportar mis ideas de manera constructiva, para así lograr objetivos comunes.",
+        "links": [
+            {
+                "text": "Email",
+                "url": "mailto: eche_lr73@hotmail.com"
+            },
+            {
+                "text": "WhatsApp",
+                "url": "https://wa.me/5492915277809"
+            },
+            {
+                "text": "LinkedIn",
+                "url": "https://www.linkedin.com/in/martin-julian-echeverria/"
+            },
+            {
+                "text": "GitHub",
+                "url": "https://github.com/echelr73"
+            }
+        ]
+    },
     "skills": [
         "Angular",
         "TypeScript",
