@@ -1,0 +1,101 @@
+$negro: #000000
+$negro-claro: #0c1a25
+$blanco: #FFFFFF
+$blanco-gris: #fdfdfb
+$azul-oscuro: #1E3A8A
+$gris-oscuro: #4B5563
+$azul-claro: #93C5FD
+$gris-claro: #D1D5DB
+$azul-suave: #60A5FA
+
+#main-footer
+    background-image: linear-gradient(to right, $negro-claro, $gris-oscuro) // Aplicamos un degradado de azul oscuro a azul claro
+    color: #FFFFFF  // blanco
+    padding: 20px
+    text-align: center
+    font-size: 14px
+
+    .footer-content
+        max-width: 1200px
+        margin: 0 auto
+
+        p
+            margin: 0
+
+        .footer-links
+            margin-top: 10px
+
+            a
+                color: #FFFFFF
+                text-decoration: none
+                padding: 0 10px
+                cursor: pointer
+
+                &:hover
+                    text-decoration: underline
+
+.modal
+  display: block
+  position: fixed
+  z-index: 1
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgba(0, 0, 0, 0.5)
+
+.modal-content
+  background-color: #fff
+  margin: 2% auto
+  padding: 20px
+  border: 1px solid #888
+  width: 80%
+  max-width: 500px
+  border-radius: 8px
+  color: $negro
+
+.close
+  color: #aaa
+  float: right
+  font-size: 28px
+  font-weight: bold
+  cursor: pointer
+
+.close:hover,
+.close:focus
+  color: #000
+  text-decoration: none
+  cursor: pointer
+
+.legal-section
+    background-color: $blanco-gris
+    margin-bottom: 30px
+    border-radius: 8px
+    color: $negro
+
+    h2
+        font-size: 24px
+        font-weight: bold
+        color: $azul-oscuro
+        margin-bottom: 15px
+
+    p
+        font-size: 14px
+        color: $gris-oscuro
+
+    .legal-item
+        margin-bottom: 20px
+
+        h3
+            font-size: 18px
+            font-weight: bold
+            color: $azul-oscuro
+            margin-bottom: 5px
+
+        p
+            font-size: 14px
+            line-height: 1.6
+            color: $negro-claro
+
+

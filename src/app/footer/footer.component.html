@@ -1,0 +1,68 @@
+<footer id="main-footer">
+    <div class="footer-content">
+        <p>Desarrollado por Martín Julián Echeverría - Todos los derechos reservados © 2024</p>
+        <div class="footer-links">
+            <a (click)="openModal('privacyPolicy')">Política de Privacidad</a> |
+            <a (click)="openModal('termsOfUse')">Términos de Uso</a>
+
+            <!-- Modal de Política de Privacidad -->
+            <div *ngIf="showPrivacyPolicy" class="modal">
+                <div class="modal-content">
+                    <span class="close" (click)="closeModal()">×</span>
+                    <div class="legal-section">
+                        <h2>Política de Privacidad</h2>
+                        <p><strong>Última actualización:</strong> 28/10/24</p>
+                        <div class="legal-item">
+                            <h3>1. Información Personal</h3>
+                            <p>Este sitio no recolecta ni almacena información personal de los usuarios. Los datos que ingreses en formularios de contacto (como nombre y correo electrónico) serán utilizados únicamente para responder a tu solicitud y no se compartirán con terceros.</p>
+                        </div>
+                        <div class="legal-item">
+                            <h3>2. Datos de Navegación</h3>
+                            <p>Podemos recopilar datos no personales de navegación, como el tipo de navegador, dispositivo, y tiempo de visita, con fines de análisis estadístico y para mejorar la experiencia del usuario. Estos datos no te identifican personalmente.</p>
+                        </div>
+                        <div class="legal-item">
+                            <h3>3. Enlaces a Otros Sitios</h3>
+                            <p>Este portafolio puede contener enlaces a sitios externos (por ejemplo, redes sociales). No somos responsables de las prácticas de privacidad de estos sitios externos y te recomendamos leer sus políticas de privacidad.</p>
+                        </div>
+                        <div class="legal-item">
+                            <h3>4. Seguridad de los Datos</h3>
+                            <p>Implementamos medidas de seguridad para proteger cualquier información que puedas compartir con nosotros. Sin embargo, no podemos garantizar una seguridad absoluta en la transmisión de datos por Internet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de Términos de Uso -->
+            <div *ngIf="showTermsOfUse" class="modal">
+                <div class="modal-content">
+                    <span class="close" (click)="closeModal()">×</span>                    
+                    <div class="legal-section">
+                        <h2>Términos de Uso</h2>
+                        <p><strong>Última actualización:</strong> 28/10/24</p>
+                        <div class="legal-item">
+                            <h3>1. Propósito del Sitio</h3>
+                            <p>Este sitio es una muestra del trabajo, habilidades y experiencia profesional de Martín Julián Echeverría. Todo el contenido aquí es solo para fines informativos y no constituye una oferta o contrato de servicios.</p>
+                        </div>
+                        <div class="legal-item">
+                            <h3>2. Propiedad Intelectual</h3>
+                            <p>Todo el contenido, diseño y material de este sitio es propiedad de Martín Julián Echeverría y está protegido por leyes de derechos de autor. No se permite el uso, reproducción o distribución de este contenido sin autorización previa.</p>
+                        </div>
+                        <div class="legal-item">
+                            <h3>3. Exactitud de la Información</h3>
+                            <p>Intento mantener la información de mi portafolio precisa y actualizada. Sin embargo, no garantizo que toda la información esté completa o libre de errores.</p>
+                        </div>
+                        <div class="legal-item">
+                            <h3>4. Modificaciones al Sitio</h3>
+                            <p>Puedo modificar, actualizar o eliminar el contenido del sitio en cualquier momento sin previo aviso.</p>
+                        </div>
+                        <div class="legal-item">
+                            <h3>5. Limitación de Responsabilidad</h3>
+                            <p>No me hago responsable de daños o pérdidas derivados del uso o incapacidad de uso de este sitio.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
