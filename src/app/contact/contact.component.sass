@@ -58,3 +58,37 @@ $azul-suave: #60A5FA
                     img
                         transform: scale(1.2)
                         transition: transform 0.3s ease
+
+@media (max-width: 800px)
+    .profile-container
+        width: 100%
+    
+    .profile-image
+        display: none
+    
+    .profile-content
+        margin: 20px 20px !important
+        width: 100% !important
+        h2
+            font-size: 1.5rem
+            text-align: center
+        .profile-description
+            font-size: 1rem !important
+        h3
+            font-size: 16px
+            text-align: center
+        .social-icons
+            display: flex
+            justify-content: center
+            a
+                img
+                    width: 40px
+                    height: 40px
+                    padding: 0px 10px
+                    transition: transform 0.3s ease
+                &:hover    
+                    img
+                        transform: scale(1.2)
+                        transition: transform 0.3s ease
+    
+
