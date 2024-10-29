@@ -16,31 +16,30 @@ $azul-suave: #60A5FA
 
     h2
         color: $azul-oscuro
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) // Sombra suave
         text-transform: uppercase
         font-weight: bold
 
     .profile-image
-        width: 500px
-        margin: 0px
+        width: 31.25rem
+        margin: 0
         img
             width: 100%
             height: auto
 
     .profile-content
-        margin: 20px 250px
+        margin: 1.25rem 15.625rem
         width: 70%
         .profile-description
-            font-size: 20px
-            margin-bottom: 15px
+            font-size: 1.25rem
+            margin-bottom: 0.938rem
             text-align: justify
             line-height: 1.5
             font-family: 'Open Sans Condensed', sans-serif
 
         h3
-            font-size: 18px
+            font-size: 1.125rem
             color: $azul-suave
-            margin-bottom: 10px
+            margin-bottom: 0.625rem
             text-decoration-line: underline
             text-transform: uppercase
 
@@ -49,12 +48,29 @@ $azul-suave: #60A5FA
 
             a
                 img
-                    width: 56px
-                    height: 56px
-                    padding: 0px 10px
+                    width: 3.5rem
+                    height: 3.5rem
+                    padding: 0 0.625rem
                     transition: transform 0.3s ease
 
                 &:hover    
                     img
                         transform: scale(1.2)
                         transition: transform 0.3s ease
+
+@media (max-width: 800px)    
+    .profile-image
+        display: none
+    
+    .profile-content
+        margin: 1.25rem 1.25rem !important
+        width: 100% !important
+        h2
+            text-align: center
+        .profile-description
+            font-size: 1rem !important
+            
+        .social-icons
+            display: flex
+            justify-content: center
+

@@ -11,13 +11,12 @@ $azul-suave: #60A5FA
 #certifications
     background-color: $azul-suave
     color: $blanco
-    padding: 5px 20px
+    padding: 0.313rem 1.25rem
     text-align: center
     user-select: none
     height: 100vh
-
     h2
-        font-size: 24px
+        font-size: 1.5rem
         font-weight: bold
         color: $negro
         text-transform: uppercase
@@ -48,12 +47,12 @@ $azul-suave: #60A5FA
                 color: $blanco
         
         mat-card-subtitle
-            font-size: 20px
+            font-size: 1.25rem
             font-weight: bold
 
         .text-content
             p
-                font-size: 18px
+                font-size: 1.125rem
                 font-family: 'Open Sans Condensed', sans-serif
                 color: rgba($blanco, 0.8)
                 text-align: center
@@ -66,3 +65,23 @@ $azul-suave: #60A5FA
   height: 10vh
   border-bottom-left-radius: 50% 80%
   border-bottom-right-radius: 50% 80%
+
+@media ( max-width: 800px )
+    #certifications
+        height: auto
+
+    h2
+        font-size: 1.25rem !important
+        margin-bottom: 2rem
+
+    mat-card
+        width: 100% !important
+        margin: 0 !important
+    
+    mat-card-subtitle
+        font-size: 1rem !important
+    
+    .text-content
+            p
+                font-size: 1rem !important
+    

@@ -1,6 +1,6 @@
 <div id="certifications">
     <h2>Certificaciones y cursos</h2>
-    <mat-grid-list cols="2" rowHeight="300px" gutterSize="30px" class="certification-grid">
+    <mat-grid-list [cols]="isSmallScreen ? 1 : 2" [rowHeight]="rowHeight" gutterSize="30px" class="certification-grid">
         <mat-grid-tile class="certification-item" *ngFor="let certification of certifications">
             <mat-card>
                 <mat-card-header>

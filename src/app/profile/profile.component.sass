@@ -26,29 +26,14 @@ mat-card
 
 .profile-header
   user-select: none
-  padding: 20px
+  padding: 1.25rem
   position: relative
   width: 100% // Hace que el contenedor ocupe toda la anchura de la pantalla
-  @media (max-width: 800px)
-    flex-direction: column // Cambiar la disposición a columnas en pantallas pequeñas
-    text-align: center
-    flex-wrap: wrap // Permitir que el contenido se acomode en varias líneas
 
 .profile-image
-  width: 400px
+  width: 25rem
   position: absolute
-  padding: 50px 0px
-
-.profile-title
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) // Sombra suave
-
-.profile-role
-  font-size: 1rem
-  color: $azul-suave
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) // Sombra suave
-
-.profile-strengths
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) // Sombra suave
+  padding: 3.125rem 0px
 
 .profile-text
   display: flex
@@ -59,35 +44,36 @@ mat-card
   left: 30% // Centra el texto horizontalmente
   p
     width: 50% // Limita el ancho del texto para que no se extienda demasiado
-    @media (max-width: 800px)
-      width: 100% // Ajusta el ancho del texto al 100% en pantallas pequeñas
-      align-items: center // Centra el texto en pantallas pequeñas
+
+.profile-role
+  font-size: 1rem
+  color: $azul-suave
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2) // Sombra suave
+
+.profile-strengths
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2) // Sombra suave
 
 ul
   list-style-type: none // Elimina los puntos de la lista
   padding: 0 // Elimina el espacio entre el borde y el texto
   display: flex // Hace que los <li> se alineen horizontalmente
-  gap: 16px // Añade espacio entre los ítems (ajústalo según prefieras)
+  gap: 1rem // Añade espacio entre los ítems
   z-index: 1
-  @media (max-width: 800px)
-    flex-direction: column // Cambiar la disposición a columnas en pantallas pequeñas
-    align-items: center // Centrar horizontalmente los íconos y el texto
 
 li
   display: flex // Flexbox para alinear ícono y texto en cada <li>
   flex-direction: column // Asegura que el ícono y el texto se apilen verticalmente
   align-items: center // Alinea verticalmente el icono y el texto
-  gap: 8px // Añade espacio entre el icono y el texto (ajústalo según prefieras)
+  justify-content: center // Alinea horizontalmente el icono y el texto
   background-color: $azul-claro
   border-radius: 50%
-  width: 10vh
-  height: 10vh
-  padding: 16px // Espaciado interno para dar un efecto de botón
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(255, 255, 255, 0.4) // Sombra interna para el efecto de relieve
+  width: 8rem
+  height: 8rem
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), inset 0 0.125rem 0.313rem rgba(255, 255, 255, 0.4) // Sombra interna para el efecto de relieve
   transition: box-shadow 0.3s ease // Transición suave para la sombra
   opacity: 0
   &:hover
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 2px 5px rgba(255, 255, 255, 0.2) // Sombra interna más sutil al pasar el mouse
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.3), inset 0 0.125rem 0.313rem rgba(255, 255, 255, 0.2) // Sombra interna más sutil al pasar el mouse
     background-color: darken($azul-claro, 5%) // Oscurece el color de fondo al pasar el mouse
 
 #strengths1
@@ -99,21 +85,21 @@ li
   animation: roll-in-left 0.6s ease-out 4s both
 
 #strengths3
-  -webkit-animation: roll-in-left 0.6s ease-out 5s both
-  animation: roll-in-left 0.6s ease-out 5s both
+  -webkit-animation: roll-in-left2 0.6s ease-out 5s both
+  animation: roll-in-left2 0.6s ease-out 5s both
 
 #strengths4
-  -webkit-animation: roll-in-left 0.6s ease-out 6s both
-  animation: roll-in-left 0.6s ease-out 6s both
+  -webkit-animation: roll-in-left2 0.6s ease-out 6s both
+  animation: roll-in-left2 0.6s ease-out 6s both
 
 #strengths5
-  -webkit-animation: roll-in-left 0.6s ease-out 7s both
-  animation: roll-in-left 0.6s ease-out 7s both
+  -webkit-animation: roll-in-left2 0.6s ease-out 7s both
+  animation: roll-in-left2 0.6s ease-out 7s both
 
 @-webkit-keyframes roll-in-left
   0%
-  -webkit-transform: translateX(400px) rotate(540deg)
-  transform: translateX(400px) rotate(540deg)
+  -webkit-transform: translateX(25rem) rotate(540deg)
+  transform: translateX(25rem) rotate(540deg)
   opacity: 0
   100%
   -webkit-transform: translateX(0) rotate(0deg)
@@ -122,27 +108,38 @@ li
 
 @keyframes roll-in-left
   0%
-    -webkit-transform: translateX(400px) rotate(540deg)
-    transform: translateX(400px) rotate(540deg)
+    -webkit-transform: translateX(25rem) rotate(540deg)
+    transform: translateX(25rem) rotate(540deg)
     opacity: 0
   100%
     -webkit-transform: translateX(0) rotate(0deg)
     transform: translateX(0) rotate(0deg)
     opacity: 1
 
-.profile-title
-  font-size: 26px
-  font-weight: bold
-  color: $negro
+@-webkit-keyframes roll-in-left2
+  0%
+  -webkit-transform: translateX(18rem) rotate(540deg)
+  transform: translateX(18rem) rotate(540deg)
+  opacity: 0
+  100%
+  -webkit-transform: translateX(0) rotate(0deg)
+  transform: translateX(0) rotate(0deg)
+  opacity: 1
+
+@keyframes roll-in-left2
+  0%
+    -webkit-transform: translateX(18rem) rotate(540deg)
+    transform: translateX(18rem) rotate(540deg)
+    opacity: 0
+  100%
+    -webkit-transform: translateX(0) rotate(0deg)
+    transform: translateX(0) rotate(0deg)
+    opacity: 1
 
 .profile-strengths
-  font-size: 18px
+  font-size: 1.125rem
   color: $negro
-  margin-top: 16px
-
-p
-  font-size: 18px
-  color: $azul-oscuro
+  margin-top: 1rem
 
 .container
   position: relative
@@ -150,7 +147,7 @@ p
 
 .wave
   position: absolute
-  height: 147px
+  height: 8.125rem
   width: 100%
   background: $blanco
   bottom: 0
@@ -175,3 +172,35 @@ p
   background-color: $negro-claro
   left: -1.5%
   top: 58%
+
+@media (max-width: 800px)
+  mat-card
+    background: $blanco
+
+  .profile-image
+    width: 9.375rem
+    padding: 0.625rem 0px
+    left: 30vw
+    top: 0vh
+  
+  .profile-header
+    flex-direction: column // Cambiar la disposición a columnas en pantallas pequeñas
+    text-align: center
+    flex-wrap: wrap // Permitir que el contenido se acomode en varias líneas
+    width: 30%
+    display: flex
+    justify-content: center
+
+  .profile-text
+    top: 9.375rem
+
+  .profile-image-logo
+    width: 18.75rem
+
+  ul
+    display: ruby
+    scale: 0.7 // Reduce el tamaño de los íconos en pantallas pequeñas
+    margin-top: -3.25rem
+
+  .wave
+    height: 3.75rem

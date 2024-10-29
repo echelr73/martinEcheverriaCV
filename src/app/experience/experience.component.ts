@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { CvService } from '../services/cv.service';
 
 @Component({
@@ -6,9 +6,10 @@ import { CvService } from '../services/cv.service';
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.sass'
 })
-export class ExperienceComponent implements AfterViewInit {
+export class ExperienceComponent implements AfterViewInit, OnInit {
 
   public cards: any[] = [];
+  public isSmallScreen = false;
 
   @ViewChildren('card', { read: ElementRef }) cardsElement!: QueryList<ElementRef>;
 
@@ -32,6 +33,15 @@ export class ExperienceComponent implements AfterViewInit {
 
   constructor(private renderer: Renderer2, private cvService: CvService) {
     this.getData();
+  }
+
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize')
+  checkScreenSize() {
+    this.isSmallScreen = window.innerWidth <= 800;
   }
 
   ngAfterViewInit(): void {

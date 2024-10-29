@@ -29,7 +29,7 @@
         {
             "position": "Desarrollador Fullstack .NET/Angular",
             "company": "Accenture",
-            "period": "Agosto 2022 - Presente",
+            "period": "Ago 2022 - Presente",
             "description": "Trabajo en un proyecto interno que se utiliza para la carga de horas trabajadas y gastos de los empleados de la empresa a nivel mundial. Resolución de bugs y desarrollo e implementación de User Story asignadas.",
             "tecnology": [
                 "Angular",
@@ -43,8 +43,8 @@
         {
             "position": "Desarrollador Fullstack .NET/Angular",
             "company": "Aoniken Servicio IT",
-            "period": "Agosto 2021 - Agosto 2022",
-            "description": "Aplicacion para la administracion de aeroplantas de YPF, incluia facturacion y comunicacion con servicios del cliente. Utilizamos una arquitectura de microservicios implementado en Kubernetes.",
+            "period": "Ago 2021 - Ago 2022",
+            "description": "Aplicacion para la administracion de aeroplantas de YPF, incluia facturacion y comunicacion con servicios del cliente. Utilizamos una arquitectura de microservicios.",
             "tecnology": [
                 "Angular",
                 ".NET",
@@ -56,10 +56,10 @@
             ]
         },
         {
-            "position": "Soporte Tecnico mesa de ayuda",
+            "position": "Soporte Tecnico Help desk",
             "company": "Aoniken Servicio IT",
-            "period": "Septiembre 2020 - Agosto 2021",
-            "description": "Soporte de aplicacion para administrat estaciones de servicio. Instalacion y configuracion de servidores y terminales de trabajo. Mantenimiento y correccion de bases de datos SQL Server.",
+            "period": "Sep 2020 - Ago 2021",
+            "description": "Soporte de aplicacion para administrar estaciones de servicio. Instalacion y configuracion de servidores y terminales de trabajo. Mantenimiento y correccion de bases de datos SQL Server. Servicio al cliente",
             "tecnology": [
                 "SQL Server",
                 "Azure"
@@ -68,7 +68,7 @@
         {
             "position": "Encargado de sucursal",
             "company": "Jean Cartier Hogar",
-            "period": "Marzo 2018 - Septiembre 2020",
+            "period": "Mar 2018 - Sep 2020",
             "description": "Tareas administrativas, seguimientos de pagos. Atencion y planificacion de redes sociales. Coordinacion y control de pedidos. Resolucion de problemas, manejo de caja y armado de informes a gerencia. Personal a cargo.",
             "tecnology": [
                 "Windows",
@@ -80,7 +80,7 @@
         "degree": "Tecnicatura Superior en Computacion",
         "institution": "Universidad Nacional del Sur",
         "period": "2010 - 2013 y 2020",
-        "description": "Curse durante 3, pero cuadno solo me faltaban 2 materias tuve que abandonar porque el horario laboral se superponia con el horario de cursada, pero en 2020, con mas tiempo, decidi retomar la carrera y finalizarla. Estudios enfocados en desarrollo de software, bases de datos, redes y administración de proyectos. A lo largo de esta carrera, adquirí competencias en el diseño y la implementación de aplicaciones informáticas, así como en la gestión eficiente de bases de datos. También profundicé en el funcionamiento de redes informáticas y en la planificación y ejecución de proyectos de TI, lo que me permitió desarrollar una visión integral sobre la tecnología y su aplicación en el mundo real."
+        "description": "Curse durante 3 años, pero cuando solo me faltaban 2 materias tuve que abandonar porque el horario laboral se superponia con el horario de cursada, pero en 2020, decidi retomar la carrera y finalizarla. Estudios enfocados en desarrollo de software, bases de datos, redes y administración de proyectos. A lo largo de esta carrera, adquirí competencias en el diseño y la implementación de aplicaciones informáticas, así como en la gestión eficiente de bases de datos. También profundicé en el funcionamiento de redes informáticas y en la planificación y ejecución de proyectos de TI, lo que me permitió desarrollar una visión integral sobre la tecnología y su aplicación en el mundo real."
     },
     "certifications": [
         {

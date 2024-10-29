@@ -18,18 +18,18 @@ $azul-suave: #60A5FA
     margin: 0 auto   
 
 mat-card
-    height: 80%
     background-color: $blanco
-    border-radius: 8px
+    border-radius: 0.5rem
+    height: 15rem
     padding: 1rem
     opacity: 0
-    transform: translateY(30px)
+    transform: translateY(1.875rem)
     transition: opacity 0.5s ease, transform 0.5s ease
 
 @keyframes fadeInLeft
     from
         opacity: 0
-        transform: translateX(100px)
+        transform: translateX(6.25rem)
     to
         opacity: 1
         transform: translateX(0)
@@ -37,10 +37,19 @@ mat-card
 @keyframes fadeInRight
     from
         opacity: 0
-        transform: translateX(-100px)
+        transform: translateX(-6.25rem)
     to
         opacity: 1
         transform: translateX(0)
+
+@keyframes fadeInUp
+    from
+        opacity: 0
+        transform: translateY(6.25rem)
+    to
+        opacity: 1
+        transform: translateY(0)
+        
 
 mat-card-title
     font-size: 1.5rem
@@ -68,7 +77,7 @@ mat-card-content p
     display: flex
     justify-content: start
     gap: 1rem
-    padding: 16px 16px 0
+    padding: 1rem 1rem 0
     justify-content: center
     img
         width: 32px
@@ -76,3 +85,20 @@ mat-card-content p
         transition: transform 0.2s ease-in-out
         &:hover
             transform: scale(1.2)
+
+@media (max-width: 800px)
+    #experience
+        height: auto
+
+    mat-grid-tile
+        display: flex
+    
+    mat-card
+        height: 100%
+        padding: 0
+    
+    mat-card-title
+        font-size: 1.25rem
+
+    .card-visible-left, .card-visible-right
+        animation: fadeInUp 1s forwards
