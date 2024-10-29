@@ -29,10 +29,6 @@ mat-card
   padding: 20px
   position: relative
   width: 100% // Hace que el contenedor ocupe toda la anchura de la pantalla
-  @media (max-width: 800px)
-    flex-direction: column // Cambiar la disposición a columnas en pantallas pequeñas
-    text-align: center
-    flex-wrap: wrap // Permitir que el contenido se acomode en varias líneas
 
 .profile-image
   width: 400px
@@ -69,9 +65,6 @@ ul
   display: flex // Hace que los <li> se alineen horizontalmente
   gap: 16px // Añade espacio entre los ítems (ajústalo según prefieras)
   z-index: 1
-  @media (max-width: 800px)
-    flex-direction: column // Cambiar la disposición a columnas en pantallas pequeñas
-    align-items: center // Centrar horizontalmente los íconos y el texto
 
 li
   display: flex // Flexbox para alinear ícono y texto en cada <li>
@@ -175,3 +168,35 @@ p
   background-color: $negro-claro
   left: -1.5%
   top: 58%
+
+@media (max-width: 800px)
+  mat-card
+    background: $blanco
+
+  .profile-image
+    width: 150px
+    padding: 10px 0px
+    left: 12vh
+    top: 0vh
+  
+  .profile-header
+    flex-direction: column // Cambiar la disposición a columnas en pantallas pequeñas
+    text-align: center
+    flex-wrap: wrap // Permitir que el contenido se acomode en varias líneas
+    width: 0%
+
+  .profile-text
+    left: 50% // Centra el texto horizontalmente en pantallas pequeñas
+    top: 150px
+    p
+      width: 100% // Ajusta el ancho del texto al 100% en pantallas pequeñas
+      align-items: center // Centra el texto en pantallas pequeñas
+
+  .profile-image-logo
+    width: 350px
+
+  ul
+    flex-direction: column // Cambiar la disposición a columnas en pantallas pequeñas
+    align-items: center // Centrar horizontalmente los íconos y el texto
+    scale: 0.7 // Reduce el tamaño de los íconos en pantallas pequeñas
+    margin-top: -100px
