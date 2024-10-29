@@ -8,7 +8,8 @@ import { CvService } from '../services/cv.service';
 })
 export class HeaderComponent implements OnInit {
 
-  links: any;
+  public links: any;
+  public isMenuOpen = false;
 
   constructor(private cvService: CvService) { }
 
@@ -16,6 +17,10 @@ export class HeaderComponent implements OnInit {
     this.cvService.getLinks().subscribe(data => {
       this.links = data.links;
     });
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   scrollToExperience() {
