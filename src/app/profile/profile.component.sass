@@ -136,6 +136,26 @@ li
     transform: translateX(0) rotate(0deg)
     opacity: 1
 
+@-webkit-keyframes roll-in-leftSmallScreen
+  0%
+    -webkit-transform: translateX(5rem) rotate(540deg)
+    transform: translateX(18rem) rotate(540deg)
+    opacity: 0
+  100%
+    -webkit-transform: translateX(0) rotate(0deg)
+    transform: translateX(0) rotate(0deg)
+    opacity: 1
+
+@keyframes roll-in-leftSmallScreen
+  0%
+    -webkit-transform: translateX(5rem) rotate(540deg)
+    transform: translateX(18rem) rotate(540deg)
+    opacity: 0
+  100%
+    -webkit-transform: translateX(0) rotate(0deg)
+    transform: translateX(0) rotate(0deg)
+    opacity: 1
+
 .profile-strengths
   font-size: 1.125rem
   color: $negro
@@ -204,3 +224,24 @@ li
 
   .wave
     height: 3.75rem
+
+  #strengths1
+    -webkit-animation: roll-in-leftSmallScreen 0.6s ease-out 3s both
+    animation: roll-in-leftSmallScreen 0.6s ease-out 3s both
+
+  #strengths2
+    -webkit-animation: roll-in-leftSmallScreen 0.6s ease-out 4s both
+    animation: roll-in-leftSmallScreen 0.6s ease-out 4s both
+
+  #strengths3
+    -webkit-animation: roll-in-leftSmallScreen 0.6s ease-out 5s both
+    animation: roll-in-leftSmallScreen 0.6s ease-out 5s both
+
+  #strengths4
+    -webkit-animation: roll-in-leftSmallScreen 0.6s ease-out 6s both
+    animation: roll-in-leftSmallScreen 0.6s ease-out 6s both
+
+  #strengths5
+    -webkit-animation: roll-in-leftSmallScreen 0.6s ease-out 7s both
+    animation: roll-in-leftSmallScreen 0.6s ease-out 7s both
+  
