@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit {
     const element = document.getElementById('experience');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.toggleMenu();
     }
   }
 
@@ -34,6 +35,7 @@ export class HeaderComponent implements OnInit {
     const element = document.getElementById('education');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.toggleMenu();
     }
   }
 
@@ -41,6 +43,7 @@ export class HeaderComponent implements OnInit {
     const element = document.getElementById('certifications');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.toggleMenu();
     }
   }
 
@@ -48,6 +51,7 @@ export class HeaderComponent implements OnInit {
     const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.toggleMenu();
     }
   }
     
