@@ -33,6 +33,14 @@ mat-card
         opacity: 1
         transform: translateX(0)
 
+@-webkit-keyframes fadeInLeft
+    from
+        opacity: 0
+        transform: translateX(6.25rem)
+    to
+        opacity: 1
+        transform: translateX(0)
+
 @keyframes fadeInRight
     from
         opacity: 0
@@ -41,7 +49,23 @@ mat-card
         opacity: 1
         transform: translateX(0)
 
+@-webkit-keyframes fadeInRight
+    from
+        opacity: 0
+        transform: translateX(-6.25rem)
+    to
+        opacity: 1
+        transform: translateX(0)
+
 @keyframes fadeInUp
+    from
+        opacity: 0
+        transform: translateY(6.25rem)
+    to
+        opacity: 1
+        transform: translateY(0)
+
+@-webkit-keyframes fadeInUp
     from
         opacity: 0
         transform: translateY(6.25rem)
@@ -67,9 +91,11 @@ mat-card-content p
     margin-bottom: 1rem
 
 .card-visible-left
+    -webkit-animation: fadeInLeft 1s forwards
     animation: fadeInLeft 1s forwards
 
 .card-visible-right
+    -webkit-animation: fadeInRight 1s forwards
     animation: fadeInRight 1s forwards
 
 .tech-icons
@@ -99,5 +125,10 @@ mat-card-content p
     mat-card-title
         font-size: 1.25rem
 
-    .card-visible-left, .card-visible-right
+    .card-visible-left
+        -webkit-animation: fadeInUp 1s forwards
+        animation: fadeInUp 1s forwards
+    
+    .card-visible-right
+        -webkit-animation: fadeInUp 1s forwards
         animation: fadeInUp 1s forwards
