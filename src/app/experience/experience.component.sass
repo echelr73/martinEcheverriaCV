@@ -82,7 +82,7 @@ mat-card-title
 mat-card-subtitle
     font-size: 1rem
     color: $gris-oscuro
-    padding: 5px 16px 0
+    padding: 0.313rem 1rem 0
 
 mat-card-content p
     font-size: 1rem
@@ -105,8 +105,8 @@ mat-card-content p
     padding: 1rem 1rem 0
     justify-content: center
     img
-        width: 32px
-        height: 32px
+        width: 2rem
+        height: 2rem
         transition: transform 0.2s ease-in-out
         &:hover
             transform: scale(1.2)
@@ -124,6 +124,39 @@ mat-card-content p
     
     mat-card-title
         font-size: 1.25rem
+
+    .card-visible-left
+        -webkit-animation: fadeInUp 1s forwards
+        animation: fadeInUp 1s forwards
+    
+    .card-visible-right
+        -webkit-animation: fadeInUp 1s forwards
+        animation: fadeInUp 1s forwards
+
+@media (max-width: 420px)
+    #experience
+        height: auto
+
+    mat-grid-tile
+        display: flex
+    
+    mat-card
+        height: 100%
+        padding: 0
+    
+    mat-card-title
+        font-size: 1rem
+    
+    mat-card-subtitle
+        font-size: 0.875rem
+    
+    mat-card-content p
+        font-size: 0.875rem
+
+    .tech-icons img
+        width: 1.5rem
+        height: 1.5rem
+
 
     .card-visible-left
         -webkit-animation: fadeInUp 1s forwards
