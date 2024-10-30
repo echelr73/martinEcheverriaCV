@@ -1,5 +1,5 @@
 <div id="experience">
-    <mat-grid-list [cols]="isSmallScreen ? 1 : 2" rowHeight="300px" gutterSize="16px">
+    <mat-grid-list [cols]="isSmallScreen ? 1 : 2" [rowHeight]="rowHeight" gutterSize="16px">
         <mat-grid-tile *ngFor="let card of cards">
             <mat-card #card>
                 <mat-card-header>

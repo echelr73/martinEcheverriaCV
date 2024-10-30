@@ -10,6 +10,7 @@ export class ExperienceComponent implements AfterViewInit, OnInit {
 
   public cards: any[] = [];
   public isSmallScreen = false;
+  public rowHeight = '300px';
 
   @ViewChildren('card', { read: ElementRef }) cardsElement!: QueryList<ElementRef>;
 
@@ -42,6 +43,7 @@ export class ExperienceComponent implements AfterViewInit, OnInit {
   @HostListener('window:resize')
   checkScreenSize() {
     this.isSmallScreen = window.innerWidth <= 800;
+    this.rowHeight = this.isSmallScreen ? '300px' : '300px';
   }
 
   ngAfterViewInit(): void {
