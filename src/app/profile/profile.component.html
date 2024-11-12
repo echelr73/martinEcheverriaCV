@@ -4,30 +4,30 @@
             <img src="assets/img/profile3.png" class="profile-image">
             <div class="profile-text">
                 <img src="assets/img/logo.svg" class="profile-image-logo">
-                <mat-card-subtitle class="profile-role">{{this.role}}</mat-card-subtitle>
+                <mat-card-subtitle class="profile-role">{{role}}</mat-card-subtitle>
                 <mat-card-subtitle class="profile-strengths">
-                    {{this.profile_strengths?.title}}
+                    {{profile_strengths?.title}}
                 </mat-card-subtitle>
                 <ul>
-                    <li id="strengths1" matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}"
+                    <li id="strengths1" matTooltip="{{profile_strengths?.strengths_responsibility.tooltip}}"
                         matTooltipPosition="below" aria-label="Learner">
-                        <mat-icon>school</mat-icon>{{this.profile_strengths?.strengths_learner.title}}
+                        <mat-icon>school</mat-icon>{{profile_strengths?.strengths_learner.title}}
                     </li>
-                    <li id="strengths2" matTooltip="{{this.profile_strengths?.strengths_responsibility.tooltip}}"
+                    <li id="strengths2" matTooltip="{{profile_strengths?.strengths_responsibility.tooltip}}"
                         matTooltipPosition="below" aria-label="Responsibility">
-                        <mat-icon>verified_user</mat-icon>{{this.profile_strengths?.strengths_responsibility.title}}
+                        <mat-icon>verified_user</mat-icon>{{profile_strengths?.strengths_responsibility.title}}
                     </li>
-                    <li id="strengths3" matTooltip="{{this.profile_strengths?.strengths_focus.tooltip}}"
+                    <li id="strengths3" matTooltip="{{profile_strengths?.strengths_focus.tooltip}}"
                         matTooltipPosition="below" aria-label="Focus">
-                        <mat-icon>center_focus_strong</mat-icon>{{this.profile_strengths?.strengths_focus.title}}
+                        <mat-icon>center_focus_strong</mat-icon>{{profile_strengths?.strengths_focus.title}}
                     </li>
-                    <li id="strengths4" matTooltip="{{this.profile_strengths?.strengths_achiever.tooltip}}"
+                    <li id="strengths4" matTooltip="{{profile_strengths?.strengths_achiever.tooltip}}"
                         matTooltipPosition="below" aria-label="Achiever">
-                        <mat-icon>check_circle</mat-icon>{{this.profile_strengths?.strengths_achiever.title}}
+                        <mat-icon>check_circle</mat-icon>{{profile_strengths?.strengths_achiever.title}}
                     </li>
-                    <li id="strengths5" matTooltip="{{this.profile_strengths?.strengths_futuristic.tooltip}}"
+                    <li id="strengths5" matTooltip="{{profile_strengths?.strengths_futuristic.tooltip}}"
                         matTooltipPosition="below" aria-label="Futuristic">
-                        <mat-icon>timeline</mat-icon>{{this.profile_strengths?.strengths_futuristic.title}}
+                        <mat-icon>timeline</mat-icon>{{profile_strengths?.strengths_futuristic.title}}
                     </li>
                 </ul>
             </div>

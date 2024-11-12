@@ -1,5 +1,6 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { CvService } from '../services/cv.service';
+import { Experience } from '../models/experience.model';
 
 @Component({
   selector: 'app-experience',
@@ -8,7 +9,7 @@ import { CvService } from '../services/cv.service';
 })
 export class ExperienceComponent implements AfterViewInit, OnInit {
 
-  public cards: any[] = [];
+  public cards: Experience[] = [];
   public isSmallScreen = false;
   public rowHeight = '300px';
 
@@ -86,7 +87,7 @@ export class ExperienceComponent implements AfterViewInit, OnInit {
 
   getData(): void {
     this.cvService.getExperienceData().subscribe(data => {
-      this.cards = data.experience;
+      this.cards = data;
 
       setTimeout(() => {
         this.setupObserver();

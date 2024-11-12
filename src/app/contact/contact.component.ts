@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CvService } from '../services/cv.service';
+import { Contact } from '../models/contact.model';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +9,7 @@ import { CvService } from '../services/cv.service';
 })
 export class ContactComponent {
 
-  public contact: any;
+  public contact: Contact;
 
   // Mapa de tecnologías a URLs de íconos
   techIcons: { [key: string]: string } = {
@@ -29,7 +30,7 @@ export class ContactComponent {
 
   getData(): void {
     this.cvService.getContactData().subscribe(data => {
-      this.contact = data.contact;
+      this.contact = data;
     });
   }
 

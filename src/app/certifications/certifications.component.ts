@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CvService } from '../services/cv.service';
+import { Certification } from '../models/certification.model';
 
 @Component({
   selector: 'app-certifications',
@@ -8,7 +9,7 @@ import { CvService } from '../services/cv.service';
 })
 export class CertificationsComponent implements OnInit {
 
-  public certifications: any[];
+  public certifications: Certification[];
   public isSmallScreen = false;
   public rowHeight = '300px';
 
@@ -41,7 +42,7 @@ export class CertificationsComponent implements OnInit {
 
   getData(): void {
     this.cvService.getCertificationsData().subscribe(data => {
-      this.certifications = data.certifications;
+      this.certifications = data;
     });
   }
 }

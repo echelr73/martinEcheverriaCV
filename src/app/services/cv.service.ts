@@ -1,6 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { Profile, ProfileStrengths } from '../models/profile-strength.model';
+import { Experience } from '../models/experience.model';
+import { Education } from '../models/education.model';
+import { Certification } from '../models/certification.model';
+import { Contact, ContactLink } from '../models/contact.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +14,7 @@ export class CvService {
 
   private jsonUrl = 'assets/cv-data.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Obtener todos los datos del CV
   getCvData(): Observable<any> {
@@ -17,55 +22,89 @@ export class CvService {
   }
 
   // Obtener solo los enlaces de contacto para el header
-  getLinks(): Observable<any> {
+  getLinks(): Observable<ContactLink[]> {
     return this.getCvData().pipe(
-      map(data => ({
-        links: data.links,
-      }))
+      map(data =>
+        data.contact.links.map((link: any) =>
+          new ContactLink(
+            link.text,
+            link.url
+          ))
+      )
     );
   }
 
   // Obtener solo el nombre, título, descripción y fortalezas para el perfil
-  getProfileData(): Observable<any> {
-    return this.getCvData().pipe(
-      map(data => ({
-        name: data.name,
+  getProfileData(): Observable<Profile> {
+    return this.http.get<Profile>(this.jsonUrl).pipe(
+      map((data: any) => ({
         role: data.role,
-        description: data.description,
-        profile_strengths: data.profile_strengths
+        profile_strengths: new ProfileStrengths(
+          data.profile_strengths.title,
+          data.profile_strengths.strengths_learner,
+          data.profile_strengths.strengths_responsibility,
+          data.profile_strengths.strengths_focus,
+          data.profile_strengths.strengths_achiever,
+          data.profile_strengths.strengths_futuristic
+        )
       }))
     );
   }
 
-  getExperienceData(): Observable<any> {
+  // Obtener solo los datos de experiencia
+  getExperienceData(): Observable<Experience[]> {
     return this.getCvData().pipe(
-      map(data => ({
-        experience: data.experience
-      }))
+      map(data =>
+        data.experience.map((exp: any) =>
+          new Experience(
+            exp.position,
+            exp.company,
+            exp.period,
+            exp.description,
+            exp.technology)
+        ))
     );
   }
 
-  getEducationData(): Observable<any> {
+  // Obtener solo los datos de educación
+  getEducationData(): Observable<Education> {
     return this.getCvData().pipe(
-      map(data => ({
-        education: data.education
-      }))
+      map(data =>
+        new Education(
+          data.education.degree,
+          data.education.institution,
+          data.education.period,
+          data.education.description
+        ))
     );
   }
 
-  getCertificationsData(): Observable<any> {
+  // Obtener solo los datos de certificaciones
+  getCertificationsData(): Observable<Certification[]> {
     return this.getCvData().pipe(
-      map(data => ({
-        certifications: data.certifications
-      }))
+      map(data =>
+        data.certifications.map((cert: any) =>
+          new Certification(
+            cert.logo,
+            cert.title,
+            cert.description
+          )
+        ))
     );
   }
 
-  getContactData(): Observable<any> {
+  // Obtener solo los datos de contacto
+  getContactData(): Observable<Contact> {
     return this.getCvData().pipe(
-      map(data => ({
-        contact: data.contact
-      }))
+      map(data => new Contact(
+        data.contact.description,
+        data.contact.links.map((link: any) =>
+          new ContactLink(
+            link.text,
+            link.url
+          )
+        )
+      ))
     );
   }
 }

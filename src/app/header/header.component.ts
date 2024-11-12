@@ -8,15 +8,11 @@ import { CvService } from '../services/cv.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public links: any;
   public isMenuOpen = false;
 
   constructor(private cvService: CvService) { }
 
   ngOnInit(): void {
-    this.cvService.getLinks().subscribe(data => {
-      this.links = data.links;
-    });
   }
 
   toggleMenu() {

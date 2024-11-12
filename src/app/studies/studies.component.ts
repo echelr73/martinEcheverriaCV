@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CvService } from '../services/cv.service';
+import { Education } from '../models/education.model';
 
 @Component({
   selector: 'app-studies',
@@ -8,7 +9,7 @@ import { CvService } from '../services/cv.service';
 })
 export class StudiesComponent {
 
-  public study: any;
+  public study: Education;
 
   constructor(private cvService: CvService) {
     this.getData();
@@ -16,7 +17,7 @@ export class StudiesComponent {
 
   getData(): void {
     this.cvService.getEducationData().subscribe(data => {
-      this.study = data.education;
+      this.study = data;
     });
   }
 }
