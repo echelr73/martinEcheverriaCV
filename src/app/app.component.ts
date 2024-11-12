@@ -1,6 +1,4 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterOutlet, NavigationEnd  } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +6,20 @@ import { Router, RouterOutlet, NavigationEnd  } from '@angular/router';
   styleUrl: './app.component.sass'
 })
 export class AppComponent {
-  title = 'webCV';
-
+  
+  // Variable para mostrar u ocultar el botón de scroll-to-top
   showButton = false;
 
-  // Detecta el scroll en la ventana
+  // Detecta el evento de desplazamiento de la ventana
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    // Verifica la posición de desplazamiento actual
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    this.showButton = scrollPosition > 100; // Mostrar botón si se scrollea más de 100px
+    // Muestra el botón si la posición de desplazamiento supera los 100px
+    this.showButton = scrollPosition > 100;
   }
 
-  // Método para volver al tope
+  // Método para desplazarse suavemente al tope de la página
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
