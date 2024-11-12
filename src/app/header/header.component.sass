@@ -7,16 +7,18 @@ mat-toolbar
   height: 8vh
   display: flex
   align-items: center
+  @media (max-width: 800px)
+    background-image: none
+    background-color: $gris-oscuro
 
-// Estilos del header
 .header-title
   user-select: none
   font-size: 2rem
   font-weight: bold
-  color: $blanco-gris // Aplicamos el color azul grisáceo claro al título
-  letter-spacing: 0.1rem // Aumenta la separación entre letras
+  color: $blanco-gris
+  letter-spacing: 0.1rem
   @media (max-width: 800px)
-      font-size: 1rem // Reduce el tamaño del texto en pantallas pequeñas
+      font-size: 1rem
 
 .spacer
     flex: 1 1 auto
@@ -24,21 +26,39 @@ mat-toolbar
 .menu
   padding: 0.5rem
   font-family: 'Open Sans Condensed', sans-serif
+  display: flex
+  @media (max-width: 800px)
+    position: absolute
+    top: 3rem
+    right: 0
+    background-color: $gris-oscuro
+    z-index: 1000
+    box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.5)
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.3s ease, visibility 0.3s ease
+    justify-content: end
 
   ul
     list-style: none
     margin: 0
     text-align: end
+    @media (max-width: 800px)
+      flex-direction: column
+      align-items: center
 
   li
     display: inline-block
     margin: 0 1rem
+    @media (max-width: 800px)
+      display: block
+      margin: 0.625rem 0
 
   a
     font-size: 0.8rem
     text-transform: uppercase
     text-decoration: none
-    color: #fff
+    color: $blanco
     display: block
     position: relative
     cursor: pointer
@@ -59,12 +79,9 @@ mat-toolbar
       transform-origin: 0 50%
       transform: scale3d(1,1,1)
 
-.menu-1
-  display: flex
-
 .menu-open
-  visibility: visible !important// Visible al activar la clase
-  opacity: 1 !important// Totalmente opaco al activar la clase
+  visibility: visible !important
+  opacity: 1 !important
 
 .menu-icon
   display: none
@@ -72,32 +89,5 @@ mat-toolbar
   color: $blanco
   font-size: 1.875rem
   margin-left: auto
-
-@media (max-width: 800px)
-  mat-toolbar
-    background-image: none
-    background-color: $gris-oscuro
-
-  .menu
-    position: absolute
-    top: 3rem
-    right: 0
-    background-color: $gris-oscuro
-    z-index: 1000
-    box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.5)
-    visibility: hidden // Oculto por defecto
-    opacity: 0 // Transparenta el menú cuando no está abierto
-    transition: opacity 0.3s ease, visibility 0.3s ease // Transición para suavizar el cambio
-    justify-content: end
-  
-    ul
-      flex-direction: column
-      align-items: center
-
-      li
-        display: block
-        margin: 0.625rem 0
-
-  .menu-icon
-    display: block // Icono de menú visible solo en pantallas pequeñas
-
+  @media (max-width: 800px)
+    display: block
