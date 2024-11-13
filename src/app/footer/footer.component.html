@@ -10,23 +10,11 @@
                 <div class="modal-content">
                     <span class="close" (click)="closeModal()">×</span>
                     <div class="legal-section">
-                        <h2>Política de Privacidad</h2>
-                        <p><strong>Última actualización:</strong> 28/10/24</p>
-                        <div class="legal-item">
-                            <h3>1. Información Personal</h3>
-                            <p>Este sitio no recolecta ni almacena información personal de los usuarios. Los datos que ingreses en formularios de contacto (como nombre y correo electrónico) serán utilizados únicamente para responder a tu solicitud y no se compartirán con terceros.</p>
-                        </div>
-                        <div class="legal-item">
-                            <h3>2. Datos de Navegación</h3>
-                            <p>Podemos recopilar datos no personales de navegación, como el tipo de navegador, dispositivo, y tiempo de visita, con fines de análisis estadístico y para mejorar la experiencia del usuario. Estos datos no te identifican personalmente.</p>
-                        </div>
-                        <div class="legal-item">
-                            <h3>3. Enlaces a Otros Sitios</h3>
-                            <p>Este portafolio puede contener enlaces a sitios externos (por ejemplo, redes sociales). No somos responsables de las prácticas de privacidad de estos sitios externos y te recomendamos leer sus políticas de privacidad.</p>
-                        </div>
-                        <div class="legal-item">
-                            <h3>4. Seguridad de los Datos</h3>
-                            <p>Implementamos medidas de seguridad para proteger cualquier información que puedas compartir con nosotros. Sin embargo, no podemos garantizar una seguridad absoluta en la transmisión de datos por Internet.</p>
+                        <h2>{{privacyPolicyData.title}}</h2>
+                        <p><strong>{{privacyPolicyData.subtitle}}</strong>{{privacyPolicyData.subtitleDate}}</p>
+                        <div class="legal-item" *ngFor="let content of privacyPolicyData.content">
+                            <h3>{{content.title}}</h3>
+                            <p>{{content.description}}</p>
                         </div>
                     </div>
                 </div>

@@ -14,6 +14,7 @@ import { environment } from '../../environments/environment';
 export class CvService {
 
   private jsonUrl = environment.apiUrl;
+  private function = 'getCvData';
   private cvData$: Observable<any> | undefined;
 
   constructor(private http: HttpClient) { }
@@ -21,7 +22,7 @@ export class CvService {
   // Obtener todos los datos del CV
   getCvData(): Observable<any> {
     if (!this.cvData$) {
-      this.cvData$ = this.http.get<any>(this.jsonUrl).pipe(
+      this.cvData$ = this.http.get<any>(this.jsonUrl + this.function).pipe(
         shareReplay(1) // Comparte el resultado con todos los suscriptores
       );
     }
