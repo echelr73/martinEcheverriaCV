@@ -12,9 +12,6 @@ describe('HeaderComponent', () => {
   let cvServiceMock: jasmine.SpyObj<CvService>;
 
   beforeEach(async () => {
-    // Mock del servicio CvService
-    cvServiceMock = jasmine.createSpyObj('CvService', ['getLinks']);
-    cvServiceMock.getLinks.and.returnValue(of({ links: [] })); // Devolver un observable vacío
 
     await TestBed.configureTestingModule({
       imports: [MatToolbarModule, MatIconModule],  // Asegurarte de importar los módulos necesarios

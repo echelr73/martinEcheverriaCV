@@ -21,19 +21,6 @@ export class CvService {
     return this.http.get<any>(this.jsonUrl);
   }
 
-  // Obtener solo los enlaces de contacto para el header
-  getLinks(): Observable<ContactLink[]> {
-    return this.getCvData().pipe(
-      map(data =>
-        data.contact.links.map((link: any) =>
-          new ContactLink(
-            link.text,
-            link.url
-          ))
-      )
-    );
-  }
-
   // Obtener solo el nombre, título, descripción y fortalezas para el perfil
   getProfileData(): Observable<Profile> {
     return this.http.get<Profile>(this.jsonUrl).pipe(
