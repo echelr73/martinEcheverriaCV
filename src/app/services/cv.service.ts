@@ -13,7 +13,6 @@ import { environment } from '../../environments/environment';
 })
 export class CvService {
 
-  //private jsonUrl = 'assets/cv-data.json';
   private jsonUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
