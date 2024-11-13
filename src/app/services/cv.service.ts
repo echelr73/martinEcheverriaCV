@@ -6,6 +6,7 @@ import { Experience } from '../models/experience.model';
 import { Education } from '../models/education.model';
 import { Certification } from '../models/certification.model';
 import { Contact, ContactLink } from '../models/contact.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ import { Contact, ContactLink } from '../models/contact.model';
 export class CvService {
 
   //private jsonUrl = 'assets/cv-data.json';
-  private jsonUrl = 'https://cv-data-api.netlify.app/.netlify/functions/getCvData';
+  private jsonUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
