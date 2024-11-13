@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, shareReplay } from 'rxjs';
 import { Profile, ProfileStrengths } from '../models/profile-strength.model';
 import { Experience } from '../models/experience.model';
 import { Education } from '../models/education.model';
@@ -14,17 +14,23 @@ import { environment } from '../../environments/environment';
 export class CvService {
 
   private jsonUrl = environment.apiUrl;
+  private cvData$: Observable<any> | undefined;
 
   constructor(private http: HttpClient) { }
 
   // Obtener todos los datos del CV
   getCvData(): Observable<any> {
-    return this.http.get<any>(this.jsonUrl);
+    if (!this.cvData$) {
+      this.cvData$ = this.http.get<any>(this.jsonUrl).pipe(
+        shareReplay(1) // Comparte el resultado con todos los suscriptores
+      );
+    }
+    return this.cvData$;
   }
 
   // Obtener solo el nombre, título, descripción y fortalezas para el perfil
   getProfileData(): Observable<Profile> {
-    return this.http.get<Profile>(this.jsonUrl).pipe(
+    return this.getCvData().pipe(
       map((data: any) => ({
         role: data.role,
         profile_strengths: new ProfileStrengths(
