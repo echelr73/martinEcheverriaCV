@@ -25,30 +25,13 @@
                 <div class="modal-content">
                     <span class="close" (click)="closeModal()">×</span>                    
                     <div class="legal-section">
-                        <h2>Términos de Uso</h2>
-                        <p><strong>Última actualización:</strong> 28/10/24</p>
-                        <div class="legal-item">
-                            <h3>1. Propósito del Sitio</h3>
-                            <p>Este sitio es una muestra del trabajo, habilidades y experiencia profesional de Martín Julián Echeverría. Todo el contenido aquí es solo para fines informativos y no constituye una oferta o contrato de servicios.</p>
-                        </div>
-                        <div class="legal-item">
-                            <h3>2. Propiedad Intelectual</h3>
-                            <p>Todo el contenido, diseño y material de este sitio es propiedad de Martín Julián Echeverría y está protegido por leyes de derechos de autor. No se permite el uso, reproducción o distribución de este contenido sin autorización previa.</p>
-                        </div>
-                        <div class="legal-item">
-                            <h3>3. Exactitud de la Información</h3>
-                            <p>Intento mantener la información de mi portafolio precisa y actualizada. Sin embargo, no garantizo que toda la información esté completa o libre de errores.</p>
-                        </div>
-                        <div class="legal-item">
-                            <h3>4. Modificaciones al Sitio</h3>
-                            <p>Puedo modificar, actualizar o eliminar el contenido del sitio en cualquier momento sin previo aviso.</p>
-                        </div>
-                        <div class="legal-item">
-                            <h3>5. Limitación de Responsabilidad</h3>
-                            <p>No me hago responsable de daños o pérdidas derivados del uso o incapacidad de uso de este sitio.</p>
+                        <h2>{{termsOfUseData.title}}</h2>
+                        <p><strong>{{termsOfUseData.subtitle}}</strong> {{termsOfUseData.subtitleDate}}</p>
+                        <div class="legal-item" *ngFor="let content of termsOfUseData.content">
+                            <h3>{{content.title}}</h3>
+                            <p>{{content.description}}</p>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
