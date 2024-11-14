@@ -8,7 +8,7 @@
             <p class="profile-description">
                 {{contact?.description}}
             </p>
-            <h3>Redes Sociales</h3>
+            <h3>Contactame</h3>
             <div class="social-icons" *ngFor="let link of contact?.links">
                 <a href="{{link?.url}}" target="_blank" aria-label="link.text">
                     <img [src]="getIcon(link.text)" [alt]="link?.text" [title]="link?.text" matTooltip="{{link?.text}}"
@@ -17,5 +17,4 @@
             </div>
         </div>
     </div>
-
 </div>
