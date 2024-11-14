@@ -28,17 +28,17 @@ export class TermsOfUseService {
   // Obtener solo el nombre, título, descripción y fortalezas para el perfil
   getTermsOfUseData(): Observable<TermsOfUse> {
     return this.getTermsOfUseDataAPI().pipe(
-      map(data =>
-        new TermsOfUse(
-          data.title,
-          data.subtitle,
-          data.subtitleDate,
-          data.content.map((content: any) =>
-            ({
-              title: content.title,
-              description: content.description
-            })
-        ))
-    ));
+      map(data => {
+        const title = data?.title ?? null;
+        const subtitle = data?.subtitle ?? null;
+        const subtitleDate = data?.subtitleDate ?? null;
+        const content = data?.content?.map((content: any) => ({
+          title: content?.title ?? null,
+          description: content?.description ?? null
+        })) ?? [];
+
+        return new TermsOfUse(title, subtitle, subtitleDate, content);
+      })
+    );
   }
 }

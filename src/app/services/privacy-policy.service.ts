@@ -30,16 +30,16 @@ export class PrivacyPolicyService {
     return this.getPrivacyPolicyDataAPI().pipe(
       map(data =>
         new PrivacyPolicy(
-          data.title,
-          data.subtitle,
-          data.subtitleDate,
-          data.content.map((content: any) =>
+          data.title ?? null,
+          data.subtitle ?? null,
+          data.subtitleDate ?? null,
+          Array.isArray(data.content) ? data.content.map((content: any) =>
             ({
               title: content.title,
               description: content.description
-            })
-        ))
-    ));
+            })) : [] // Usa un array vacío si data.content es null o no es un array
+      ))
+    );
   }
 
 }
