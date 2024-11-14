@@ -19,6 +19,7 @@ import { MatDivider } from '@angular/material/divider';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { AppTouchTooltipDirective } from './directives/app-touch-tooltip.directive';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     StudiesComponent,
     CertificationsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    AppTouchTooltipDirective,
   ],
   imports: [
     HttpClientModule,
